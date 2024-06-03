@@ -215,7 +215,12 @@ public class Manager : MonoBehaviour
                         {
                             Debug.Log($"The {obj.name} was dropped on {criminal.CriminalName}");
                             feedback = ($"The {obj.name} was dropped on {criminal.CriminalName}");
+
+                            //replace slot wt GameObject and make it there permenantly
+                            //Disable drag
                             obj.GetComponent<EventTrigger>().enabled = false;
+                            //ReplaceSlot wt Game Object
+                            ReplaceSlotWithObject(blackSlot, obj);
                             checkScore(criminal);
                             colorGameObjects.Remove(obj);
                             return;
@@ -227,6 +232,13 @@ public class Manager : MonoBehaviour
         }
 
         obj.transform.position = initialPos;
+    }
+
+    private void ReplaceSlotWithObject(GameObject slot, GameObject obj)
+    {
+        slot.SetActive(false); // Hide the slot object
+        obj.transform.SetParent(slot.transform.parent, false); // Make the dropped object a child of the slot's parent
+        obj.transform.position = slot.transform.position; // Position the dropped object at the slot's position
     }
 
     void checkScore(CriminalInfo criminal)

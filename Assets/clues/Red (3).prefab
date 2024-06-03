@@ -93,7 +93,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
           m_TargetAssemblyTypeName: Manager, Assembly-CSharp
           m_MethodName: DragRed
           m_Mode: 1
@@ -109,7 +109,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
           m_TargetAssemblyTypeName: Manager, Assembly-CSharp
           m_MethodName: DropRed
           m_Mode: 1
