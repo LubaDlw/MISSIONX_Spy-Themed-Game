@@ -82,7 +82,7 @@ public class Manager : MonoBehaviour
         CriminalDisplay.SetActive(true);
 
         // Initialize the list of color game objects
-        colorGameObjects = new List<GameObject> { red, blue, green, yellow, orange };
+       // colorGameObjects = new List<GameObject> { red, blue, green, yellow, orange };
 
         // Randomize which three objects are visible
         SetRandomVisibleColors();

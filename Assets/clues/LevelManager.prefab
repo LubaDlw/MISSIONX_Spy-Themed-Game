@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f839898cb6bb9cb4c9c0ddb318395656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: {fileID: 0}
-  blue: {fileID: 0}
-  green: {fileID: 0}
-  yellow: {fileID: 0}
-  orange: {fileID: 0}
+  red: {fileID: 8710502498719387737, guid: 96c31d31e3265184d9f42bbf2858b2f3, type: 3}
+  blue: {fileID: 8994307632271968282, guid: 329e847ed5cedbc479ba27d23f8f0776, type: 3}
+  green: {fileID: 2189837925403609611, guid: 1cb9c12b6f3d178408d16414f913434e, type: 3}
+  yellow: {fileID: 5601807943093558961, guid: 9b4bfe9f14aa011499a040bf59ac33bf, type: 3}
+  orange: {fileID: 4404546592913686403, guid: 21755812f4d15754a94fa12f97e30be2, type: 3}
   redBlackList:
   - {fileID: 0}
   - {fileID: 0}
