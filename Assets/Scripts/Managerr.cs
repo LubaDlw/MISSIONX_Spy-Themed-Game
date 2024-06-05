@@ -41,13 +41,15 @@ public class Manager : MonoBehaviour
     public TMP_Text feedbacktxt;
     public string feedback;
 
-    public int currentPlayer;
+    public int currentPlayer = 0;
 
     public GameObject panelPlayer1;
     public GameObject panelPlayer2;
-   // int roundsPlayed = 0;
+    // int roundsPlayed = 0;
     //int currentPlayer = 1;
-    
+
+    int successfulDropsCount = 0;
+
 
     public static Manager Instance { get; private set; }
 
@@ -66,9 +68,10 @@ public class Manager : MonoBehaviour
     void Start()
     {
         NPCinteraction.SetActive(true); // first game screen that explains game
-        panel.SetActive(false);
+       // panel.SetActive(false);
         cluePanel.SetActive(false);
-        CriminalDisplay.SetActive(false);
+        //CriminalDisplay.SetActive(false);
+        panelPlayer1.SetActive(false);
         feedbacktxt.text = " ";
 
         colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, yellow, orange };
@@ -76,17 +79,35 @@ public class Manager : MonoBehaviour
         SetRandomVisibleColors();
     }
 
-    public void NPCDone() // this the button after the panel;
+    public void NPCDone() // this the button after the panel; on player 1
     {
         NPCinteraction.SetActive(false);
 
-        panel.SetActive(true);
-        cluePanel.SetActive(true);
-        CriminalDisplay.SetActive(true);
+       // panel.SetActive(true); //Player 1 
+      //  CriminalDisplay.SetActive(true); //player 1 criminal
+
+        cluePanel.SetActive(false); // where clues are
+        currentPlayer = 0;
+        successfulDropsCount = 0;
+        SetPlayerPanels(currentPlayer);
+
 
         Debug.Log("This code is running");
 
         SetRandomVisibleColors();
+    }
+    void SetPlayerPanels(int player)
+    {
+        if (player == 0)
+        {
+            panelPlayer1.SetActive(true); Debug.Log("Player 1 panel is activated");
+            panelPlayer2.SetActive(false);
+        }
+        else
+        {
+            panelPlayer1.SetActive(false);
+            panelPlayer2.SetActive(true);
+        }
     }
 
     void SetRandomVisibleColors()
@@ -244,6 +265,22 @@ public class Manager : MonoBehaviour
                             ReplaceSlotWithObject(blackSlot, obj);
                             checkScore(criminal);
                             colorGameObjects.Remove(obj);
+
+                            if (correctFlag)
+                            {
+                                successfulDropsCount++;
+
+                                if (successfulDropsCount >= 2)
+                                {
+                                    Debug.Log("Next Players Turn");
+                                    // Switch turns after two successful drops
+                                    currentPlayer = (currentPlayer + 1) % 2; // Switch between 0 and 1
+                                    successfulDropsCount = 0; // Reset successful drops count
+                                    SetPlayerPanels(currentPlayer);
+                                    // Generate clues for the next player
+                                    //SetRandomVisibleColors();
+                                }
+                            }
                             return;
                         }
                     }
