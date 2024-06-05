@@ -21,9 +21,11 @@ public class Manager : MonoBehaviour
     public CriminalInfo criminal;
     public List<CriminalInfo> criminals = new List<CriminalInfo>();
 
-    public List<GameObject> panelPos;
+    public List<GameObject> panelPos; // this is where the clues are generated forPl1
+    public List<GameObject> panelPosPlayer2; // this is where the clues are generaed for PL2
     public Transform panelToDisplay;
-    public GameObject panel;
+    public GameObject panelCl1; // player 1's clues
+    public GameObject panelCl2; //Player2 clue panel
     public GameObject NPCinteraction;
     public GameObject CriminalDisplay;
 
@@ -121,14 +123,75 @@ public class Manager : MonoBehaviour
                 colorGameObjects[i].SetActive(true);
                 SetInitialPosition(colorGameObjects[i]);
 
+                // for player 1
                 if (i < panelPos.Count)
                 {
-                    colorGameObjects[i].transform.SetParent(panel.transform, false);
+                    colorGameObjects[i].transform.SetParent(panelCl1.transform, false);
                     colorGameObjects[i].transform.position = panelPos[i].transform.position;
                 }
                 else
                 {
                     Debug.LogWarning("Not enough panel positions defined for the number of active objects.");
+                }
+
+                // forplayer 2
+
+                if (i < panelPosPlayer2.Count)
+                {
+                    GameObject clone = Instantiate(colorGameObjects[i]);
+                    clone.transform.SetParent(panelCl2.transform, false);
+                    clone.transform.position = panelPosPlayer2[i].transform.position;
+
+                    EventTrigger trigger = clone.GetComponent<EventTrigger>();
+                    if (trigger != null)
+                    {
+                        trigger.triggers.Clear(); // Clear existing triggers if any
+                        EventTrigger.Entry entry = new EventTrigger.Entry();
+                        entry.eventID = EventTriggerType.Drag;
+                        entry.callback.AddListener((eventData) => { DragObject(clone); });
+                        trigger.triggers.Add(entry);
+
+                        // Add other event type
+                        // ok so we need to figure out how to get correctdrag and drop logic forclones 
+
+                        EventTrigger dropTrigger = clone.GetComponent<EventTrigger>();
+                        if (dropTrigger != null)
+                        {
+                            //dropTrigger.triggers.Clear(); // Clear existing triggers if any
+                            EventTrigger.Entry dropEntry = new EventTrigger.Entry();
+                            dropEntry.eventID = EventTriggerType.Drop; // Use appropriate event type for drop
+                            string tag = clone.tag;
+
+                            switch (tag)
+                            {
+                                case "Red":
+                                    Debug.Log("redTag is triggered");
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, redBlackList, ref redCorrect, redInitialPos); });
+                                    break;
+                                case "Blue":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, blueBlackList, ref blueCorrect, blueInitialPos); });
+                                    break;
+                                case "Green":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, blueBlackList, ref blueCorrect, blueInitialPos); });
+                                    break;
+                                case "Yellow":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, blueBlackList, ref blueCorrect, blueInitialPos); });
+                                    break;
+                                case "Orange":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, blueBlackList, ref blueCorrect, blueInitialPos); });
+                                    break;
+                                // Add cases for other tags
+                                default:
+                                    Debug.LogWarning("Unhandled tag: " + tag);
+                                    break;
+                            }
+                            dropTrigger.triggers.Add(dropEntry);
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("Not enough panel positions defined for Player 2.");
                 }
             }
             else
