@@ -19,7 +19,8 @@ public class Manager : MonoBehaviour
     public List<GameObject> orangeBlackList = new List<GameObject>();
 
     public CriminalInfo criminal;
-    public List<CriminalInfo> criminals = new List<CriminalInfo>();
+    public List<CriminalInfo> criminals = new List<CriminalInfo>(); //player1 criminals
+    public List<CriminalInfo> player2Criminals = new List<CriminalInfo>(); // player 2's criminals
 
     public List<GameObject> panelPos; // this is where the clues are generated forPl1
     public List<GameObject> panelPosPlayer2; // this is where the clues are generaed for PL2
@@ -28,6 +29,8 @@ public class Manager : MonoBehaviour
     public GameObject panelCl2; //Player2 clue panel
     public GameObject NPCinteraction;
     public GameObject CriminalDisplay;
+    public GameObject player2CriminalDisplay; //player 2 criminals
+    
 
     Vector2 redInitialPos, red1InitialPos, red2InitialPos, blueInitialPos, greenInitialPos, yellowInitialPos, orangeInitialPos;
 

@@ -2206,7 +2206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867786695}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CriminalBtn, Assembly-CSharp
         m_MethodName: ToggleBulldog
         m_Mode: 1
@@ -2777,7 +2777,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867786695}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CriminalBtn, Assembly-CSharp
         m_MethodName: ToggleGhost
         m_Mode: 1
@@ -3020,9 +3020,9 @@ RectTransform:
   - {fileID: 1127294615}
   m_Father: {fileID: 326788493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 303.735, y: -928.4817}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 335.9467, y: 185.9326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &721098380
@@ -3209,7 +3209,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867786695}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CriminalBtn, Assembly-CSharp
         m_MethodName: ToggleBulldog
         m_Mode: 1
@@ -3417,9 +3417,9 @@ RectTransform:
   - {fileID: 50335729}
   m_Father: {fileID: 326788493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 303.735, y: -559.089}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 335.9467, y: 185.9326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &745506949
@@ -3718,17 +3718,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 170bae7de0be7804682276b16fde486e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &867786695 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7669095180779822564, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
-  m_PrefabInstance: {fileID: 4957452922128282360}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867786691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379bbb7447140e947a168acda366deb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &867786696
@@ -4493,7 +4482,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867786695}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CriminalBtn, Assembly-CSharp
         m_MethodName: TogglePapito
         m_Mode: 1
@@ -5042,7 +5031,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867786695}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CriminalBtn, Assembly-CSharp
         m_MethodName: ToggleGhost
         m_Mode: 1
@@ -7256,9 +7245,9 @@ RectTransform:
   - {fileID: 163718624}
   m_Father: {fileID: 326788493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 303.735, y: -189.69633}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 335.9467, y: 185.9326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1521916847
@@ -7454,9 +7443,9 @@ RectTransform:
   - {fileID: 1752005018}
   m_Father: {fileID: 326788493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 303.735, y: -1297.8743}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 335.9467, y: 185.9326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558214233
@@ -9340,7 +9329,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867786695}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CriminalBtn, Assembly-CSharp
         m_MethodName: TogglePapito
         m_Mode: 1
@@ -11518,6 +11507,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1558214233}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: redBlackList.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: blueBlackList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: greenBlackList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: orangeBlackList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: panelPosPlayer2.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -11538,9 +11543,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 844785206}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: redBlackList.Array.data[4]
+      value: 
+      objectReference: {fileID: 612204853}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: redBlackList.Array.data[5]
+      value: 
+      objectReference: {fileID: 1419314862}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: redBlackList.Array.data[6]
+      value: 
+      objectReference: {fileID: 347247671}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: redBlackList.Array.data[7]
+      value: 
+      objectReference: {fileID: 187458424}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: yellowBlackList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: blueBlackList.Array.data[0]
       value: 
       objectReference: {fileID: 1129352377}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: blueBlackList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1157953259}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: player2Criminals.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: greenBlackList.Array.data[0]
       value: 
@@ -11554,6 +11587,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 124152808}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: greenBlackList.Array.data[3]
+      value: 
+      objectReference: {fileID: 574506700}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: greenBlackList.Array.data[4]
+      value: 
+      objectReference: {fileID: 2072352909}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: greenBlackList.Array.data[5]
+      value: 
+      objectReference: {fileID: 578388434}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: orangeBlackList.Array.data[0]
       value: 
       objectReference: {fileID: 1787862131}
@@ -11565,6 +11610,18 @@ PrefabInstance:
       propertyPath: orangeBlackList.Array.data[2]
       value: 
       objectReference: {fileID: 2080619639}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: orangeBlackList.Array.data[3]
+      value: 
+      objectReference: {fileID: 573406608}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: orangeBlackList.Array.data[4]
+      value: 
+      objectReference: {fileID: 333054758}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: orangeBlackList.Array.data[5]
+      value: 
+      objectReference: {fileID: 1299453786}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: panelPosPlayer2.Array.data[0]
       value: 
@@ -11581,6 +11638,26 @@ PrefabInstance:
       propertyPath: yellowBlackList.Array.data[0]
       value: 
       objectReference: {fileID: 3091726}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: yellowBlackList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1504978693}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: player2Criminals.Array.data[0]
+      value: 
+      objectReference: {fileID: 739150387}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: player2Criminals.Array.data[1]
+      value: 
+      objectReference: {fileID: 272374129}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: player2Criminals.Array.data[2]
+      value: 
+      objectReference: {fileID: 1631496960}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: player2Criminals.Array.data[3]
+      value: 
+      objectReference: {fileID: 371626966}
     - target: {fileID: 4613785626870514004, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: m_Name
       value: LevelManager
@@ -11597,7 +11674,8 @@ PrefabInstance:
       propertyPath: BulldogPnl
       value: 
       objectReference: {fileID: 745506947}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7669095180779822564, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
