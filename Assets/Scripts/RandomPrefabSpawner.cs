@@ -4,6 +4,7 @@ using UnityEngine;
 public class RandomPrefabSpawner : MonoBehaviour
 {
     public GameObject[] prefabs;  // Array to hold the prefabs
+    public GameObject[] spawnPoints; // Array to hold the spawn points
     public Transform parentPanel; // The parent panel where the prefabs will be instantiated
 
     void Start()
@@ -12,6 +13,13 @@ public class RandomPrefabSpawner : MonoBehaviour
         if (prefabs.Length != 5)
         {
             Debug.LogError("There should be exactly 5 prefabs assigned to the array.");
+            return;
+        }
+
+        // Ensure there are exactly 3 spawn points
+        if (spawnPoints.Length != 3)
+        {
+            Debug.LogError("There should be exactly 3 spawn points assigned to the array.");
             return;
         }
 
@@ -27,10 +35,10 @@ public class RandomPrefabSpawner : MonoBehaviour
             indices[randomIndex] = temp;
         }
 
-        // Instantiate the first 3 prefabs from the shuffled list
+        // Instantiate the first 3 prefabs from the shuffled list at the spawn points
         for (int i = 0; i < 3; i++)
         {
-            Instantiate(prefabs[indices[i]], parentPanel);
+            Instantiate(prefabs[indices[i]], spawnPoints[i].transform.position, Quaternion.identity, parentPanel);
         }
     }
 }

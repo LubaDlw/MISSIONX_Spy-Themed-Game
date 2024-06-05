@@ -8,6 +8,15 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
     public GameObject red, blue, green, yellow, orange;
+
+    public GameObject redPrefab;
+    public GameObject bluePrefab;
+    public GameObject greenPrefab;
+    public GameObject yellowPrefab;
+    public GameObject orangePrefab;
+
+    public List<GameObject> colorPrefabs;
+
     public List<GameObject> redBlackList = new List<GameObject>();
     public List<GameObject> blueBlackList = new List<GameObject>();
     public List<GameObject> greenBlackList = new List<GameObject>();
@@ -60,19 +69,19 @@ public class Manager : MonoBehaviour
         CriminalDisplay.SetActive(false);
         feedbacktxt.text = " ";
 
-       /* redInitialPos = red.transform.position;
-        blueInitialPos = blue.transform.position;
-        greenInitialPos = green.transform.position;
-        yellowInitialPos = yellow.transform.position;
-        orangeInitialPos = orange.transform.position;
-       */
+      
+
+        
 
         // Initialize the list of color game objects
-      //  colorGameObjects = new List<GameObject> { red, blue, green, yellow, orange };
-        
+          colorGameObjects = new List<GameObject> { red, blue, green, yellow, orange };
+
         // Randomize which three objects are visible
-      //  SetRandomVisibleColors();
+          //SetRandomVisibleColors();
+        InstantiateRandomColors();
     }
+
+   
 
    public  void NPCDone()
     {
@@ -82,13 +91,60 @@ public class Manager : MonoBehaviour
         CriminalDisplay.SetActive(true);
 
         // Initialize the list of color game objects
-       // colorGameObjects = new List<GameObject> { red, blue, green, yellow, orange };
+      //  colorGameObjects = new List<GameObject> {red, blue, green, yellow, orange };
 
         // Randomize which three objects are visible
-        SetRandomVisibleColors();
+
+       // SetRandomVisibleColors();
+        InstantiateRandomColors();
 
     }
 
+    void InstantiateRandomColors()
+    {
+        // Clear the existing list of color game objects
+        colorGameObjects.Clear();
+
+        InstantiateColor(redPrefab);
+        InstantiateColor(bluePrefab);
+        InstantiateColor(greenPrefab);
+        InstantiateColor(yellowPrefab);
+        InstantiateColor(orangePrefab);
+    }
+
+    void InstantiateColor(GameObject prefab)
+    {
+        GameObject colorObject = Instantiate(prefab, panel.transform);
+        colorObject.transform.position = GetRandomPanelPosition();
+
+        colorGameObjects.Add(colorObject);
+    }
+
+    Vector3 GetRandomPanelPosition()
+    {
+        if (panelPos.Count > 0)
+        {
+            int randomIndex = Random.Range(0, panelPos.Count);
+            return panelPos[randomIndex].transform.position;
+        }
+        else
+        {
+            Debug.LogError("No panel positions defined!");
+            return Vector3.zero;
+        }
+    }
+
+
+    private void ShuffleColorGameObjects()
+    {
+        for (int i = 0; i < colorGameObjects.Count; i++)
+        {
+            GameObject temp = colorGameObjects[i];
+            int randomIndex = Random.Range(i, colorGameObjects.Count);
+            colorGameObjects[i] = colorGameObjects[randomIndex];
+            colorGameObjects[randomIndex] = temp;
+        }
+    }
 
     public void SetRandomVisibleColors()
     {
