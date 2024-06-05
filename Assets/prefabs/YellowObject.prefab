@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8710502498719387737
+--- !u!1 &5550219275557317351
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2735182084057580596}
-  - component: {fileID: 6020024557662514880}
-  - component: {fileID: 2120347388151658826}
-  - component: {fileID: 3446653601219034660}
+  - component: {fileID: 6747358175719907258}
+  - component: {fileID: 8925297015155905110}
+  - component: {fileID: 1272664112428127684}
+  - component: {fileID: 6977960591640847873}
   m_Layer: 5
-  m_Name: Red (3)
-  m_TagString: Untagged
+  m_Name: YellowObject
+  m_TagString: Yellow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!224 &2735182084057580596
+--- !u!224 &6747358175719907258
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8710502498719387737}
+  m_GameObject: {fileID: 5550219275557317351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,31 +35,31 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1285.802, y: 450.48434}
+  m_AnchoredPosition: {x: -261, y: -146}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6020024557662514880
+--- !u!222 &8925297015155905110
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8710502498719387737}
+  m_GameObject: {fileID: 5550219275557317351}
   m_CullTransparentMesh: 1
---- !u!114 &2120347388151658826
+--- !u!114 &1272664112428127684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8710502498719387737}
+  m_GameObject: {fileID: 5550219275557317351}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.8373691, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -76,13 +76,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3446653601219034660
+--- !u!114 &6977960591640847873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8710502498719387737}
+  m_GameObject: {fileID: 5550219275557317351}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
@@ -95,7 +95,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
           m_TargetAssemblyTypeName: Manager, Assembly-CSharp
-          m_MethodName: DragRed
+          m_MethodName: DragYellow
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
           m_TargetAssemblyTypeName: Manager, Assembly-CSharp
-          m_MethodName: DropRed
+          m_MethodName: DropYellow
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

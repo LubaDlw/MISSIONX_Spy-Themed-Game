@@ -7,13 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
-    public GameObject red, blue, green, yellow, orange;
-
-    public GameObject redPrefab;
-    public GameObject bluePrefab;
-    public GameObject greenPrefab;
-    public GameObject yellowPrefab;
-    public GameObject orangePrefab;
+    public GameObject red, red1, red2;
+    public GameObject blue, green, yellow, orange;
 
     public List<GameObject> colorPrefabs;
 
@@ -26,21 +21,19 @@ public class Manager : MonoBehaviour
     public CriminalInfo criminal;
     public List<CriminalInfo> criminals = new List<CriminalInfo>();
 
-    //testList
-    public List<GameObject> panelPos; //this is where they are shown on the panel
+    public List<GameObject> panelPos;
     public Transform panelToDisplay;
     public GameObject panel;
     public GameObject NPCinteraction;
     public GameObject CriminalDisplay;
 
-    Vector2 redInitialPos, blueInitialPos, greenInitialPos, yellowInitialPos, orangeInitialPos;
+    Vector2 redInitialPos, red1InitialPos, red2InitialPos, blueInitialPos, greenInitialPos, yellowInitialPos, orangeInitialPos;
 
-    bool redCorrect, blueCorrect, greenCorrect, yellowCorrect, orangeCorrect = false;
-    public GameObject cluePanel; // this is where the clues are showed
+    bool redCorrect, red1Correct, red2Correct, blueCorrect, greenCorrect, yellowCorrect, orangeCorrect = false;
+    public GameObject cluePanel;
 
-    public List<GameObject> colorGameObjects; //this the list used
+    public List<GameObject> colorGameObjects;
 
-    // Player Score System
     public int player1Score;
     public int player2Score;
     public TMP_Text player1ScoreTxt;
@@ -50,125 +43,62 @@ public class Manager : MonoBehaviour
 
     public int currentPlayer;
 
+    public GameObject panelPlayer1;
+    public GameObject panelPlayer2;
+   // int roundsPlayed = 0;
+    //int currentPlayer = 1;
+    
 
-    //
     public static Manager Instance { get; private set; }
 
     private void Awake()
     {
-        
-        player1Score = PlayerPrefs.GetInt("Player1Score", 0);
-        player2Score = PlayerPrefs.GetInt("Player2Score", 0);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
+
     void Start()
     {
-
-        NPCinteraction.SetActive(true);
+        NPCinteraction.SetActive(true); // first game screen that explains game
         panel.SetActive(false);
         cluePanel.SetActive(false);
         CriminalDisplay.SetActive(false);
         feedbacktxt.text = " ";
 
-      
+        colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, yellow, orange };
 
-        
-
-        // Initialize the list of color game objects
-          colorGameObjects = new List<GameObject> { red, blue, green, yellow, orange };
-
-        // Randomize which three objects are visible
-          //SetRandomVisibleColors();
-        InstantiateRandomColors();
+        SetRandomVisibleColors();
     }
 
-   
-
-   public  void NPCDone()
+    public void NPCDone() // this the button after the panel;
     {
         NPCinteraction.SetActive(false);
+
         panel.SetActive(true);
         cluePanel.SetActive(true);
         CriminalDisplay.SetActive(true);
 
-        // Initialize the list of color game objects
-      //  colorGameObjects = new List<GameObject> {red, blue, green, yellow, orange };
+        Debug.Log("This code is running");
 
-        // Randomize which three objects are visible
-
-       // SetRandomVisibleColors();
-        InstantiateRandomColors();
-
+        SetRandomVisibleColors();
     }
 
-    void InstantiateRandomColors()
+    void SetRandomVisibleColors()
     {
-        // Clear the existing list of color game objects
-        colorGameObjects.Clear();
+        ShuffleColorGameObjects();
 
-        InstantiateColor(redPrefab);
-        InstantiateColor(bluePrefab);
-        InstantiateColor(greenPrefab);
-        InstantiateColor(yellowPrefab);
-        InstantiateColor(orangePrefab);
-    }
-
-    void InstantiateColor(GameObject prefab)
-    {
-        GameObject colorObject = Instantiate(prefab, panel.transform);
-        colorObject.transform.position = GetRandomPanelPosition();
-
-        colorGameObjects.Add(colorObject);
-    }
-
-    Vector3 GetRandomPanelPosition()
-    {
-        if (panelPos.Count > 0)
-        {
-            int randomIndex = Random.Range(0, panelPos.Count);
-            return panelPos[randomIndex].transform.position;
-        }
-        else
-        {
-            Debug.LogError("No panel positions defined!");
-            return Vector3.zero;
-        }
-    }
-
-
-    private void ShuffleColorGameObjects()
-    {
-        for (int i = 0; i < colorGameObjects.Count; i++)
-        {
-            GameObject temp = colorGameObjects[i];
-            int randomIndex = Random.Range(i, colorGameObjects.Count);
-            colorGameObjects[i] = colorGameObjects[randomIndex];
-            colorGameObjects[randomIndex] = temp;
-        }
-    }
-
-    public void SetRandomVisibleColors()
-    {
-        // Shuffle the list of color game objects
-        for (int i = 0; i < colorGameObjects.Count; i++)
-        {
-            GameObject temp = colorGameObjects[i];
-            int randomIndex = Random.Range(i, colorGameObjects.Count);
-            colorGameObjects[i] = colorGameObjects[randomIndex];
-            colorGameObjects[randomIndex] = temp;
-        }
-
-        // Set the first three objects as active and the rest as inactive
         for (int i = 0; i < colorGameObjects.Count; i++)
         {
             if (i < 3)
             {
                 colorGameObjects[i].SetActive(true);
-                redInitialPos = red.transform.position;
-                blueInitialPos = blue.transform.position;
-                greenInitialPos = green.transform.position;
-                yellowInitialPos = yellow.transform.position;
-                orangeInitialPos = orange.transform.position;
-
+                SetInitialPosition(colorGameObjects[i]);
 
                 if (i < panelPos.Count)
                 {
@@ -187,60 +117,88 @@ public class Manager : MonoBehaviour
         }
     }
 
-    
-
-   
-
-    
-
-    public void DragOrange()
+    void ShuffleColorGameObjects()
     {
-        orange.transform.position = Input.mousePosition;
+        for (int i = 0; i < colorGameObjects.Count; i++)
+        {
+            GameObject temp = colorGameObjects[i];
+            int randomIndex = Random.Range(i, colorGameObjects.Count);
+            colorGameObjects[i] = colorGameObjects[randomIndex];
+            colorGameObjects[randomIndex] = temp;
+        }
     }
 
-    public void DragYellow()
+    void SetInitialPosition(GameObject obj)
     {
-        yellow.transform.position = Input.mousePosition;
+        if (obj == red)
+            redInitialPos = obj.transform.position;
+        else if (obj == red1)
+            red1InitialPos = obj.transform.position;
+        else if (obj == red2)
+            red2InitialPos = obj.transform.position;
+        else if (obj == blue)
+            blueInitialPos = obj.transform.position;
+        else if (obj == green)
+            greenInitialPos = obj.transform.position;
+        else if (obj == yellow)
+            yellowInitialPos = obj.transform.position;
+        else if (obj == orange)
+            orangeInitialPos = obj.transform.position;
     }
 
-    public void DragGreen()
+    public void DragObject(GameObject obj)
     {
-        green.transform.position = Input.mousePosition;
-    }
-
-    public void DragBlue()
-    {
-        blue.transform.position = Input.mousePosition;
+        obj.transform.position = Input.mousePosition;
     }
 
     public void DragRed()
     {
-        red.transform.position = Input.mousePosition;
+        DragObject(red);
     }
 
-    public void DropOrange()
+    public void DragRed1()
     {
-        DropObject(orange, orangeBlackList, ref orangeCorrect, orangeInitialPos);
+        DragObject(red1);
     }
 
-
-
-                             
-
-
-
-
-
-
-
-    public void DropYellow()
+    public void DragRed2()
     {
-        DropObject(yellow, yellowBlackList, ref yellowCorrect, yellowInitialPos);
+        DragObject(red2);
     }
 
-    public void DropGreen()
+    public void DragBlue()
     {
-        DropObject(green, greenBlackList, ref greenCorrect, greenInitialPos);
+        DragObject(blue);
+    }
+
+    public void DragGreen()
+    {
+        DragObject(green);
+    }
+
+    public void DragYellow()
+    {
+        DragObject(yellow);
+    }
+
+    public void DragOrange()
+    {
+        DragObject(orange);
+    }
+
+    public void DropRed()
+    {
+        DropObject(red, redBlackList, ref redCorrect, redInitialPos);
+    }
+
+    public void DropRed1()
+    {
+        DropObject(red1, redBlackList, ref red1Correct, red1InitialPos);
+    }
+
+    public void DropRed2()
+    {
+        DropObject(red2, redBlackList, ref red2Correct, red2InitialPos);
     }
 
     public void DropBlue()
@@ -248,9 +206,19 @@ public class Manager : MonoBehaviour
         DropObject(blue, blueBlackList, ref blueCorrect, blueInitialPos);
     }
 
-    public void DropRed()
+    public void DropGreen()
     {
-        DropObject(red, redBlackList, ref redCorrect, redInitialPos);
+        DropObject(green, greenBlackList, ref greenCorrect, greenInitialPos);
+    }
+
+    public void DropYellow()
+    {
+        DropObject(yellow, yellowBlackList, ref yellowCorrect, yellowInitialPos);
+    }
+
+    public void DropOrange()
+    {
+        DropObject(orange, orangeBlackList, ref orangeCorrect, orangeInitialPos);
     }
 
     private void DropObject(GameObject obj, List<GameObject> blackList, ref bool correctFlag, Vector2 initialPos)
@@ -270,12 +238,9 @@ public class Manager : MonoBehaviour
                         if (slot == blackSlot)
                         {
                             Debug.Log($"The {obj.name} was dropped on {criminal.CriminalName}");
-                            feedback = ($"The {obj.name} was dropped on {criminal.CriminalName}");
-
-                            //replace slot wt GameObject and make it there permenantly
-                            //Disable drag
+                            feedback = $"The {obj.name} was dropped on {criminal.CriminalName}";
+                            // keep track of turn moves
                             obj.GetComponent<EventTrigger>().enabled = false;
-                            //ReplaceSlot wt Game Object
                             ReplaceSlotWithObject(blackSlot, obj);
                             checkScore(criminal);
                             colorGameObjects.Remove(obj);
@@ -292,9 +257,9 @@ public class Manager : MonoBehaviour
 
     private void ReplaceSlotWithObject(GameObject slot, GameObject obj)
     {
-        slot.SetActive(false); // Hide the slot object
-        obj.transform.SetParent(slot.transform.parent, false); // Make the dropped object a child of the slot's parent
-        obj.transform.position = slot.transform.position; // Position the dropped object at the slot's position
+        slot.SetActive(false);
+        obj.transform.SetParent(slot.transform.parent, false);
+        obj.transform.position = slot.transform.position;
     }
 
     void checkScore(CriminalInfo criminal)
@@ -303,8 +268,8 @@ public class Manager : MonoBehaviour
         if (criminal.cluesFound == criminal.TotalClues)
         {
             Debug.Log("All clues found for " + criminal.CriminalName);
-            feedback = ("All clues found for " + criminal.CriminalName);
-            if(currentPlayer == 0)
+            feedback = "All clues found for " + criminal.CriminalName;
+            if (currentPlayer == 0)
             {
                 player1Score += criminal.points;
             }
@@ -312,7 +277,6 @@ public class Manager : MonoBehaviour
             {
                 player2Score += criminal.points;
             }
-            //player1Score += criminal.points;
         }
     }
 
@@ -320,7 +284,7 @@ public class Manager : MonoBehaviour
     {
         if (player1ScoreTxt != null && player2ScoreTxt != null)
         {
-            player1ScoreTxt.text = "Player 1 Score: " + player1Score.ToString(); // Update text with player's score
+            player1ScoreTxt.text = "Player 1 Score: " + player1Score.ToString();
             player2ScoreTxt.text = "Player 2 Score: " + player2Score.ToString();
         }
         else
@@ -331,13 +295,11 @@ public class Manager : MonoBehaviour
 
     private void Update()
     {
-        if (redCorrect && blueCorrect && greenCorrect && yellowCorrect && orangeCorrect)
+        if (redCorrect && red1Correct && red2Correct && blueCorrect && greenCorrect && yellowCorrect && orangeCorrect)
         {
             Debug.Log("You Win");
         }
         UpdatePlayerScoreText();
         feedbacktxt.text = feedback;
     }
-
-
 }

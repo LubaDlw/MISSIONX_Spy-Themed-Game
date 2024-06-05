@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Enemy
   - Criminal
+  - Yellow
+  - Red
+  - Blue
+  - Green
+  - Orange
   layers:
   - Default
   - TransparentFX
