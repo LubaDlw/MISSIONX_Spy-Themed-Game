@@ -107,11 +107,15 @@ public class Manager : MonoBehaviour
         {
             panelPlayer1.SetActive(true); Debug.Log("Player 1 panel is activated");
             panelPlayer2.SetActive(false);
+            panelPlayer1.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
+            panelPlayer2.GetComponent<PanelInteractivityControl>().DisablePanelInteractivity();
         }
         else
         {
             panelPlayer1.SetActive(false);
             panelPlayer2.SetActive(true);
+            panelPlayer1.GetComponent<PanelInteractivityControl>().DisablePanelInteractivity();
+            panelPlayer2.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
         }
     }
 
@@ -168,20 +172,19 @@ public class Manager : MonoBehaviour
                             switch (tag)
                             {
                                 case "Red":
-                                    Debug.Log("redTag is triggered");
                                     dropEntry.callback.AddListener((eventData) => { DropObject(clone, redBlackList, ref redCorrect, redInitialPos); });
                                     break;
                                 case "Blue":
                                     dropEntry.callback.AddListener((eventData) => { DropObject(clone, blueBlackList, ref blueCorrect, blueInitialPos); });
                                     break;
                                 case "Green":
-                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, blueBlackList, ref blueCorrect, blueInitialPos); });
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, greenBlackList, ref greenCorrect, greenInitialPos); });
                                     break;
                                 case "Yellow":
-                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, blueBlackList, ref blueCorrect, blueInitialPos); });
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, yellowBlackList, ref yellowCorrect, yellowInitialPos); });
                                     break;
                                 case "Orange":
-                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, blueBlackList, ref blueCorrect, blueInitialPos); });
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, orangeBlackList, ref orangeCorrect, orangeInitialPos); });
                                     break;
                                 // Add cases for other tags
                                 default:

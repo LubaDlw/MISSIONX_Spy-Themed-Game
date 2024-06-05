@@ -3551,6 +3551,7 @@ GameObject:
   - component: {fileID: 838516297}
   - component: {fileID: 838516299}
   - component: {fileID: 838516298}
+  - component: {fileID: 838516300}
   m_Layer: 5
   m_Name: Player1
   m_TagString: Untagged
@@ -3618,6 +3619,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838516296}
   m_CullTransparentMesh: 1
+--- !u!114 &838516300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838516296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8989a9614d2fb489e2787842927881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &844785206
 GameObject:
   m_ObjectHideFlags: 0
@@ -8681,6 +8694,7 @@ GameObject:
   - component: {fileID: 1753069062}
   - component: {fileID: 1753069064}
   - component: {fileID: 1753069063}
+  - component: {fileID: 1753069065}
   m_Layer: 5
   m_Name: Player2
   m_TagString: Untagged
@@ -8747,6 +8761,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753069061}
   m_CullTransparentMesh: 1
+--- !u!114 &1753069065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753069061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8989a9614d2fb489e2787842927881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1766198123
 GameObject:
   m_ObjectHideFlags: 0
@@ -11452,7 +11478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: criminals.Array.size
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: prefabs.Array.data[0]
@@ -11506,6 +11532,22 @@ PrefabInstance:
       propertyPath: criminals.Array.data[3]
       value: 
       objectReference: {fileID: 1558214233}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: criminals.Array.data[4]
+      value: 
+      objectReference: {fileID: 739150387}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: criminals.Array.data[5]
+      value: 
+      objectReference: {fileID: 272374129}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: criminals.Array.data[6]
+      value: 
+      objectReference: {fileID: 1631496960}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: criminals.Array.data[7]
+      value: 
+      objectReference: {fileID: 371626966}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: redBlackList.Array.size
       value: 8
