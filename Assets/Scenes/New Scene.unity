@@ -1096,14 +1096,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f839898cb6bb9cb4c9c0ddb318395656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turnText: {fileID: 0}
   red: {fileID: 708056747}
+  red1: {fileID: 0}
+  red2: {fileID: 0}
   blue: {fileID: 759349757}
   green: {fileID: 752443008}
   yellow: {fileID: 639978647}
   orange: {fileID: 1504435021}
+  colorPrefabs: []
   redBlackList:
   - {fileID: 1822269686}
   - {fileID: 1831801790}
+  blueBlackList: []
+  greenBlackList: []
+  yellowBlackList: []
+  orangeBlackList: []
+  criminal: {fileID: 0}
+  criminals: []
+  player2Criminals: []
+  panelPos: []
+  panelPosPlayer2: []
+  panelToDisplay: {fileID: 0}
+  panelCl1: {fileID: 0}
+  panelCl2: {fileID: 0}
+  NPCinteraction: {fileID: 0}
+  CriminalDisplay: {fileID: 0}
+  player2CriminalDisplay: {fileID: 0}
+  cluePanel: {fileID: 0}
+  colorGameObjects: []
+  player1Score: 0
+  player2Score: 0
+  player1ScoreTxt: {fileID: 0}
+  player2ScoreTxt: {fileID: 0}
+  feedbacktxt: {fileID: 0}
+  feedback: 
+  currentPlayer: 0
+  panelPlayer1: {fileID: 0}
+  panelPlayer2: {fileID: 0}
 --- !u!4 &1077072289
 Transform:
   m_ObjectHideFlags: 0

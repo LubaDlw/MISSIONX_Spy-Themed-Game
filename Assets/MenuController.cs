@@ -11,7 +11,7 @@ public class MenuController : MonoBehaviour
     public void StartGame()
     {
         // Load the game scene
-        SceneManager.LoadScene("Player1Scene");
+        SceneManager.LoadScene("THEMAINSCENE");
         manager.currentPlayer = 0;
         manager.player1Score = 0;
         manager.player2Score = 0;
