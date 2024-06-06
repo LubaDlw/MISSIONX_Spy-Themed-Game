@@ -84,7 +84,7 @@ public class Manager : MonoBehaviour
 
         colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, yellow, orange };
 
-        SetRandomVisibleColors();
+      // SetRandomVisibleColors();
     }
 
     public void NPCDone() // this the button after the panel; on player 1
@@ -108,6 +108,8 @@ public class Manager : MonoBehaviour
     {
         if (player == 0)
         {
+            SetRandomVisibleColors(); // set new clues after player turn
+            // new clues 
             panelPlayer1.SetActive(true); Debug.Log("Player 1 panel is activated");
             panelPlayer2.SetActive(false);
             panelPlayer1.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
@@ -125,6 +127,9 @@ public class Manager : MonoBehaviour
 
     void SetRandomVisibleColors()
     {
+
+        ClearPanelClues(panelCl1);
+        ClearPanelClues(panelCl2);
         ShuffleColorGameObjects();
 
         for (int i = 0; i < colorGameObjects.Count; i++)
@@ -208,6 +213,14 @@ public class Manager : MonoBehaviour
             {
                 colorGameObjects[i].SetActive(false);
             }
+        }
+    }
+
+    void ClearPanelClues(GameObject panel)
+    {
+        foreach (Transform child in panel.transform)
+        {
+            child.gameObject.SetActive(false); //This is to fix the bug where more previoyus clues still appear on panel
         }
     }
 
@@ -323,7 +336,7 @@ public class Manager : MonoBehaviour
         foreach (GameObject blackSlot in blackList)
         {
             // Check if the blackSlot is part of the active panel
-            if (!blackSlot.transform.IsChildOf(activePanel.transform))
+            if (!blackSlot.transform.IsChildOf(activePanel.transform)) // fix raycast issue
             {
                 continue;
             }
@@ -359,6 +372,12 @@ public class Manager : MonoBehaviour
                                     currentPlayer = (currentPlayer + 1) % 2; // Switch between 0 and 1
                                     successfulDropsCount = 0; // Reset successful drops count
                                     SetPlayerPanels(currentPlayer);
+                                    if (currentPlayer == 0)
+                                    {
+                                        Debug.Log("The generate clue code is running");
+                                        //SetRandomVisibleColors(); //new clues on next turn 
+                                        // add method to keep track of how many rounds have passed
+                                    }
                                     // Generate clues for the next player
                                     //SetRandomVisibleColors();
                                 }
