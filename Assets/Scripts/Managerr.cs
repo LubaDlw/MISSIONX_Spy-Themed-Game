@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
+
+    public TMP_Text turnText;
+
     public GameObject red, red1, red2;
     public GameObject blue, green, yellow, orange;
 
@@ -401,11 +404,31 @@ public class Manager : MonoBehaviour
 
     private void Update()
     {
+        UpdateTurnText();
         if (redCorrect && red1Correct && red2Correct && blueCorrect && greenCorrect && yellowCorrect && orangeCorrect)
         {
             Debug.Log("You Win");
         }
         UpdatePlayerScoreText();
         feedbacktxt.text = feedback;
+    }
+
+    void UpdateTurnText()
+    {
+        if (turnText != null)
+        {
+            if (currentPlayer == 0)
+            {
+                turnText.text = "Player 1's Turn";
+            }
+            else if (currentPlayer == 1)
+            {
+                turnText.text = "Player 2's Turn";
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Turn Text reference is not set!");
+        }
     }
 }
