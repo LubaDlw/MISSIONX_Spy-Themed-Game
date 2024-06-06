@@ -117,6 +117,7 @@ public class Manager : MonoBehaviour
         {
             panelPlayer1.SetActive(false);
             panelPlayer2.SetActive(true);
+            Debug.Log("Player 2 panel is activated");
             panelPlayer1.GetComponent<PanelInteractivityControl>().DisablePanelInteractivity();
             panelPlayer2.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
         }
@@ -316,8 +317,17 @@ public class Manager : MonoBehaviour
 
     private void DropObject(GameObject obj, List<GameObject> blackList, ref bool correctFlag, Vector2 initialPos)
     {
+        // Determine the active panel based on the current player
+        GameObject activePanel = currentPlayer == 0 ? panelPlayer1 : panelPlayer2;
+
         foreach (GameObject blackSlot in blackList)
         {
+            // Check if the blackSlot is part of the active panel
+            if (!blackSlot.transform.IsChildOf(activePanel.transform))
+            {
+                continue;
+            }
+
             float distance = Vector3.Distance(obj.transform.position, blackSlot.transform.position);
 
             if (distance < 50)
