@@ -115,9 +115,9 @@ public class Manager : MonoBehaviour
 
     public GameObject panelPlayer1;
     public GameObject panelPlayer2;
-    // int roundsPlayed = 0;
+   public  int roundsPlayed = 0; // rounds played to keep Track of endGame
     //int currentPlayer = 1;
-
+    private bool roundIncremented = false; //bool to check if the round check has been incremented yet
     int successfulDropsCount = 0;
 
 
@@ -146,7 +146,7 @@ public class Manager : MonoBehaviour
 
         colorGameObjects = new List<GameObject> { red, red1, red2, blueEyes, greenEyes, yellow, orange };
 
-        //ACTUAL GAME OBJECTS
+        //ACTUAL GAME OBJECTS needa add multiple instancws of Each
         //colorGameObjects = new List<GameObject> { red, red1, red2, blueEyes, greenEyes, yellow, orange,
         //blackHair, blondeHair, brownEyes, sixty, eighty, hundred, oneSixty, oneEighty, twoHundred, blackSuit,
         //greySuit, stripedSuit };
@@ -587,6 +587,11 @@ public class Manager : MonoBehaviour
 
     private void Update()
     {
+
+        if (roundsPlayed == 3)// number of rounds in our game
+        {
+            Debug.Log("All rounds played");
+        }
         UpdateTurnText();
         if (redCorrect && red1Correct && red2Correct && blueCorrect && greenCorrect && yellowCorrect && orangeCorrect)
         {
@@ -602,11 +607,19 @@ public class Manager : MonoBehaviour
         {
             if (currentPlayer == 0)
             {
+                roundIncremented = false; // Reset the flag when Player 1's turn starts
                 turnText.text = "Player 1's Turn";
+                
+
             }
             else if (currentPlayer == 1)
             {
                 turnText.text = "Player 2's Turn";
+                if (!roundIncremented)
+                {
+                    roundsPlayed++;  // Increment roundsPlayed only once per round
+                    roundIncremented = true; // Set the flag to indicate the increment has occurred
+                }
             }
         }
         else
