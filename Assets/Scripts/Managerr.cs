@@ -449,7 +449,7 @@ public class Manager : MonoBehaviour
 
     public void DropRed()
     {
-        DropObject(red, redBlackList, ref redCorrect, redInitialPos);
+        DropObject(red, redBlackList, ref redCorrect, redInitialPos); // try use tags to make code less cumbersome
     }
 
     public void DropRed1()
