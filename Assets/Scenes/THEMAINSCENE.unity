@@ -618,7 +618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6648454033116092710, guid: 29a2671ae16199e44bb964d2658057f9, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: brownEyess
+      value: DragBrownEyes
       objectReference: {fileID: 0}
     - target: {fileID: 6648454033116092710, guid: 29a2671ae16199e44bb964d2658057f9, type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -11345,6 +11345,14 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6648454033116092710, guid: 29a2671ae16199e44bb964d2658057f9, type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6648454033116092710, guid: 29a2671ae16199e44bb964d2658057f9, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6648454033116092710, guid: 29a2671ae16199e44bb964d2658057f9, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 867786692}
@@ -11352,6 +11360,14 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 867786692}
+    - target: {fileID: 6648454033116092710, guid: 29a2671ae16199e44bb964d2658057f9, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DragBrownEyes
+      objectReference: {fileID: 0}
+    - target: {fileID: 6648454033116092710, guid: 29a2671ae16199e44bb964d2658057f9, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DropBrownEyes
+      objectReference: {fileID: 0}
     - target: {fileID: 6659534744463399139, guid: 29a2671ae16199e44bb964d2658057f9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

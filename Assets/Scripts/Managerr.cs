@@ -412,12 +412,13 @@ public class Manager : MonoBehaviour
         obj.transform.position = Input.mousePosition;
     }
 
+    // Drag functions
+
     public void DragRed()
     {
         DragObject(red);
     }
 
-   
     public void DragRed1()
     {
         DragObject(red1);
@@ -426,43 +427,6 @@ public class Manager : MonoBehaviour
     public void DragRed2()
     {
         DragObject(red2);
-    }
-
-
-    public void dragBlackHair()
-    {
-        DragObject(blackHair);
-    }
-
-    public void dragBlondeHair()
-    {
-        DragObject(blondeHair);
-    }
-
-    // weight
-    #region Weight Clues
-    public void dragSixty()
-    {
-        DragObject(sixty);
-    }
-
-    public void dragEighty()
-    {
-        DragObject(eighty);
-    }
-
-    public void dragHundred()
-    {
-        DragObject(hundred);
-    }
-
-    #endregion
-
-    // eyes clues 
-    #region eyes clues
-    public void dragBrownEyess()
-    {
-        DragObject(brownEyes);
     }
 
     public void DragBlue()
@@ -475,8 +439,6 @@ public class Manager : MonoBehaviour
         DragObject(greenEyes);
     }
 
-    #endregion
-
     public void DragYellow()
     {
         DragObject(yellow);
@@ -487,10 +449,71 @@ public class Manager : MonoBehaviour
         DragObject(orange);
     }
 
-    // DROP METHODS 
+    public void DragBlackHair()
+    {
+        DragObject(blackHair);
+    }
+
+    public void DragBlondeHair()
+    {
+        DragObject(blondeHair);
+    }
+
+    public void DragBrownEyes()
+    {
+        DragObject(brownEyes);
+    }
+
+    public void DragSixty()
+    {
+        DragObject(sixty);
+    }
+
+    public void DragEighty()
+    {
+        DragObject(eighty);
+    }
+
+    public void DragHundred()
+    {
+        DragObject(hundred);
+    }
+
+    public void DragOneSixty()
+    {
+        DragObject(oneSixty);
+    }
+
+    public void DragOneEighty()
+    {
+        DragObject(oneEighty);
+    }
+
+    public void DragTwoHundred()
+    {
+        DragObject(twoHundred);
+    }
+
+    public void DragBlackSuit()
+    {
+        DragObject(blackSuit);
+    }
+
+    public void DragGreySuit()
+    {
+        DragObject(greySuit);
+    }
+
+    public void DragStripedSuit()
+    {
+        DragObject(stripedSuit);
+    }
+
+    // Drop functions
+
     public void DropRed()
     {
-        DropObject(red, redBlackList, ref redCorrect, redInitialPos); // try use tags to make code less cumbersome
+        DropObject(red, redBlackList, ref redCorrect, redInitialPos);
     }
 
     public void DropRed1()
@@ -501,11 +524,6 @@ public class Manager : MonoBehaviour
     public void DropRed2()
     {
         DropObject(red2, redBlackList, ref red2Correct, red2InitialPos);
-    }
-
-    public void dropBlackHair()
-    {
-        DropObject(blackHair, blackHairList, ref blackHairCorrect, blackHairInitialPos);
     }
 
     public void DropBlue()
@@ -528,10 +546,68 @@ public class Manager : MonoBehaviour
         DropObject(orange, orangeBlackList, ref orangeCorrect, orangeInitialPos);
     }
 
+    public void DropBlackHair()
+    {
+        DropObject(blackHair, blackHairList, ref blackHairCorrect, blackHairInitialPos);
+    }
+
+    public void DropBlondeHair()
+    {
+        DropObject(blondeHair, blondeHairList, ref blondeHairCorrect, blondeHairInitialPos);
+    }
+
     public void DropBrownEyes()
     {
         DropObject(brownEyes, brownEyesList, ref brownEyesCorrect, brownEyesInitialPos);
     }
+
+    public void DropSixty()
+    {
+        DropObject(sixty, sixtyKG, ref sixtyCorrect, sixtyInitialPos);
+    }
+
+    public void DropEighty()
+    {
+        DropObject(eighty, eightyKG, ref eightyCorrect, eightyInitialPos);
+    }
+
+    public void DropHundred()
+    {
+        DropObject(hundred, hundredKG, ref hundredCorrect, hundredInitialPos);
+    }
+
+    public void DropOneSixty()
+    {
+        DropObject(oneSixty, oneSixtyM, ref oneSixtyCorrect, oneSixtyInitialPos);
+    }
+
+    public void DropOneEighty()
+    {
+        DropObject(oneEighty, oneEightyM, ref oneEightyCorrect, oneEightyInitialPos);
+    }
+
+    public void DropTwoHundred()
+    {
+        DropObject(twoHundred, twoHundredM, ref twoHundredCorrect, twoHundredInitialPos);
+    }
+
+    public void DropBlackSuit()
+    {
+        DropObject(blackSuit, blackSuitList, ref blackSuitCorrect, blackSuitInitialPos);
+    }
+
+    public void DropGreySuit()
+    {
+        DropObject(greySuit, greySuitList, ref greySuitCorrect, greySuitInitialPos);
+    }
+
+    public void DropStripedSuit()
+    {
+        DropObject(stripedSuit, stripedSuitList, ref stripedSuitCorrect, stripedSuitInitialPos);
+    }
+
+
+
     private void DropObject(GameObject obj, List<GameObject> blackList, ref bool correctFlag, Vector2 initialPos)
     {
         // Determine the active panel based on the current player
