@@ -144,7 +144,7 @@ public class Manager : MonoBehaviour
         panelPlayer1.SetActive(false);
         feedbacktxt.text = " ";
 
-        colorGameObjects = new List<GameObject> { red, red1, red2, blueEyes, greenEyes, yellow, orange };
+        colorGameObjects = new List<GameObject> { red, red1, red2, blueEyes, greenEyes, yellow, orange, brownEyes };
 
         //ACTUAL GAME OBJECTS needa add multiple instancws of Each
         //colorGameObjects = new List<GameObject> { red, red1, red2, blueEyes, greenEyes, yellow, orange,
@@ -269,9 +269,10 @@ public class Manager : MonoBehaviour
                             case "BlondeHair":
                                 dropEntry.callback.AddListener((eventData) => { DropObject(clone, blondeHairList, ref blondeHairCorrect, blondeHairInitialPos); });
                                 break;
-                            case "BrownEyes":
+                            */case "BrownEyes":
                                 dropEntry.callback.AddListener((eventData) => { DropObject(clone, brownEyesList, ref brownEyesCorrect, brownEyesInitialPos); });
                                 break;
+                                    /*
                             case "Sixty":
                                 dropEntry.callback.AddListener((eventData) => { DropObject(clone, sixtyKG, ref sixtyCorrect, sixtyInitialPos); });
                                 break;
@@ -366,10 +367,10 @@ public class Manager : MonoBehaviour
                 break;
             case "BlondeHair":
                 blondeHairInitialPos = obj.transform.position;
-                break;
+                break;*/
             case "BrownEyes":
                 brownEyesInitialPos = obj.transform.position;
-                break;
+                break;/*
             case "Sixty":
                 sixtyInitialPos = obj.transform.position;
                 break;
@@ -415,6 +416,11 @@ public class Manager : MonoBehaviour
     public void DragRed()
     {
         DragObject(red);
+    }
+
+    public void brownEyess()
+    {
+        DragObject(brownEyes);
     }
 
     public void DragRed1()
@@ -482,6 +488,10 @@ public class Manager : MonoBehaviour
         DropObject(orange, orangeBlackList, ref orangeCorrect, orangeInitialPos);
     }
 
+    public void DropBrownEyes()
+    {
+        DropObject(brownEyes, brownEyesList, ref brownEyesCorrect, brownEyesInitialPos);
+    }
     private void DropObject(GameObject obj, List<GameObject> blackList, ref bool correctFlag, Vector2 initialPos)
     {
         // Determine the active panel based on the current player
