@@ -244,7 +244,7 @@ public class Manager : MonoBehaviour
                             dropEntry.eventID = EventTriggerType.Drop; // Use appropriate event type for drop
                             string tag = clone.tag;
 
-                            switch (tag)
+                            switch (tag)  // this is the line of code that adds triggers to the cloned GameObjects
                             {
                                 case "Red":
                                     dropEntry.callback.AddListener((eventData) => { DropObject(clone, redBlackList, ref redCorrect, redInitialPos); });
@@ -261,18 +261,16 @@ public class Manager : MonoBehaviour
                                 case "Orange":
                                     dropEntry.callback.AddListener((eventData) => { DropObject(clone, orangeBlackList, ref orangeCorrect, orangeInitialPos); });
                                     break;
-
-                                /*
-                                 case "BlackHair":
+                             case "BlackHair":
                                 dropEntry.callback.AddListener((eventData) => { DropObject(clone, blackHairList, ref blackHairCorrect, blackHairInitialPos); });
                                 break;
                             case "BlondeHair":
                                 dropEntry.callback.AddListener((eventData) => { DropObject(clone, blondeHairList, ref blondeHairCorrect, blondeHairInitialPos); });
                                 break;
-                            */case "BrownEyes":
+                            case "BrownEyes":
                                 dropEntry.callback.AddListener((eventData) => { DropObject(clone, brownEyesList, ref brownEyesCorrect, brownEyesInitialPos); });
                                 break;
-                                    /*
+                                    
                             case "Sixty":
                                 dropEntry.callback.AddListener((eventData) => { DropObject(clone, sixtyKG, ref sixtyCorrect, sixtyInitialPos); });
                                 break;
@@ -301,7 +299,7 @@ public class Manager : MonoBehaviour
                                 dropEntry.callback.AddListener((eventData) => { DropObject(clone, stripedSuitList, ref stripedSuitCorrect, stripedSuitInitialPos); });
                                 break;
 
-                                 */
+                                 
                                 // Above we are adding listeners to the cloned GameObjects for player 2
                                 default:
                                     Debug.LogWarning("Unhandled tag: " + tag);
