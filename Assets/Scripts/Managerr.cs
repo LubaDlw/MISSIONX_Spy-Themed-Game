@@ -406,6 +406,7 @@ public class Manager : MonoBehaviour
          
     }
 
+    // DRAG METHODS
     public void DragObject(GameObject obj)
     {
         obj.transform.position = Input.mousePosition;
@@ -416,11 +417,7 @@ public class Manager : MonoBehaviour
         DragObject(red);
     }
 
-    public void brownEyess()
-    {
-        DragObject(brownEyes);
-    }
-
+   
     public void DragRed1()
     {
         DragObject(red1);
@@ -429,6 +426,43 @@ public class Manager : MonoBehaviour
     public void DragRed2()
     {
         DragObject(red2);
+    }
+
+
+    public void dragBlackHair()
+    {
+        DragObject(blackHair);
+    }
+
+    public void dragBlondeHair()
+    {
+        DragObject(blondeHair);
+    }
+
+    // weight
+    #region Weight Clues
+    public void dragSixty()
+    {
+        DragObject(sixty);
+    }
+
+    public void dragEighty()
+    {
+        DragObject(eighty);
+    }
+
+    public void dragHundred()
+    {
+        DragObject(hundred);
+    }
+
+    #endregion
+
+    // eyes clues 
+    #region eyes clues
+    public void dragBrownEyess()
+    {
+        DragObject(brownEyes);
     }
 
     public void DragBlue()
@@ -441,6 +475,8 @@ public class Manager : MonoBehaviour
         DragObject(greenEyes);
     }
 
+    #endregion
+
     public void DragYellow()
     {
         DragObject(yellow);
@@ -451,6 +487,7 @@ public class Manager : MonoBehaviour
         DragObject(orange);
     }
 
+    // DROP METHODS 
     public void DropRed()
     {
         DropObject(red, redBlackList, ref redCorrect, redInitialPos); // try use tags to make code less cumbersome
@@ -464,6 +501,11 @@ public class Manager : MonoBehaviour
     public void DropRed2()
     {
         DropObject(red2, redBlackList, ref red2Correct, red2InitialPos);
+    }
+
+    public void dropBlackHair()
+    {
+        DropObject(blackHair, blackHairList, ref blackHairCorrect, blackHairInitialPos);
     }
 
     public void DropBlue()
