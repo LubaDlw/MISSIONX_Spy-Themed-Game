@@ -359,16 +359,16 @@ public class Manager : MonoBehaviour
             case "Orange":
                 orangeInitialPos = obj.transform.position;
                 break;
-                /*
+                
             case "BlackHair":
                 blackHairInitialPos = obj.transform.position;
                 break;
             case "BlondeHair":
                 blondeHairInitialPos = obj.transform.position;
-                break;*/
+                break;
             case "BrownEyes":
                 brownEyesInitialPos = obj.transform.position;
-                break;/*
+                break;
             case "Sixty":
                 sixtyInitialPos = obj.transform.position;
                 break;
@@ -395,15 +395,15 @@ public class Manager : MonoBehaviour
                 break;
             case "StripedSuit":
                 stripedSuitInitialPos = obj.transform.position;
-                break;*/
+                break;
             default:
                 Debug.LogWarning("No initial position set for the object with tag: " + obj.tag);
                 break;
         }
-        /*
+        
           
           
-         */
+         
     }
 
     public void DragObject(GameObject obj)
