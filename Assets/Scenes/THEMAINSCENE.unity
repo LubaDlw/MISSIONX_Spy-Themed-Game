@@ -3656,7 +3656,7 @@ MonoBehaviour:
   - {fileID: 979521673}
   TotalClues: 3
   cluesFound: 0
-  points: 5
+  points: 6
 --- !u!114 &686067676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12711,6 +12711,10 @@ PrefabInstance:
       propertyPath: panelPlayer2
       value: 
       objectReference: {fileID: 1753069061}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: player1Score
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: yellowPrefab
       value: 
