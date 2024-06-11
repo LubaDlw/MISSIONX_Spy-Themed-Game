@@ -12656,6 +12656,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1030947418509573686}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: blueEyes
+      value: 
+      objectReference: {fileID: 8044338696721454663}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: criminal
       value: 
       objectReference: {fileID: 1521916850}
@@ -12675,6 +12679,10 @@ PrefabInstance:
       propertyPath: cluePanel
       value: 
       objectReference: {fileID: 1335949684}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: greenEyes
+      value: 
+      objectReference: {fileID: 2543660006576957970}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: redPrefab
       value: 
