@@ -10,14 +10,70 @@ public class Manager : MonoBehaviour
 
     public TMP_Text turnText;
 
+    //HAIR
+    [Header("HAIR")]
+    public GameObject blackHair;
+    public GameObject blondeHair;
     public GameObject red, red1, red2;
+
+    //Eyes
+    [Header("Eyes")]
+    public GameObject blueEyes;
+    public GameObject greenEyes;
+    public GameObject brownEyes;
+
+    //Weight
+    [Header("Weight")]
+    public GameObject sixty;
+    public GameObject eighty;
+    public GameObject hundred;
+
+    //Height
+    [Header("Height")]
+    public GameObject oneSixty;
+    public GameObject oneEighty;
+    public GameObject twoHundred;
+
+    //SuitColor
+    [Header("Suit Color")]
+    public GameObject blackSuit;
+    public GameObject greySuit;
+    public GameObject stripedSuit;
+
+
+
     public GameObject blue, green, yellow, orange;
 
     public List<GameObject> colorPrefabs;
 
+    //HAIR
     public List<GameObject> redBlackList = new List<GameObject>();
-    public List<GameObject> blueBlackList = new List<GameObject>();
-    public List<GameObject> greenBlackList = new List<GameObject>();
+    public List<GameObject> blackHairList = new List<GameObject>(); // Black Hair
+    public List<GameObject> blondeHairList = new List<GameObject>(); // Blonde Hair
+
+    //Eyes
+    public List<GameObject> brownEyesList = new List<GameObject>(); // Brown Eyes
+    public List<GameObject> blueBlackList = new List<GameObject>();//Blue Eyes
+    public List<GameObject> greenBlackList = new List<GameObject>(); //GreenEyes
+
+    //Weight
+    public List<GameObject> sixtyKG = new List<GameObject>(); // 60 KG's
+    public List<GameObject> eightyKG = new List<GameObject>(); // 80 KG's
+    public List<GameObject> hundredKG = new List<GameObject>(); // 100 KG's
+
+
+    //Height
+    public List<GameObject> oneSixtyM = new List<GameObject>(); // 160 metres
+    public List<GameObject> oneEightyM = new List<GameObject>(); // 180 metres
+    public List<GameObject> twoHundredM = new List<GameObject>(); // 200 metres
+
+
+    // Suit Color
+    public List<GameObject> blackSuitList = new List<GameObject>(); // Black Suit
+    public List<GameObject> greySuitList = new List<GameObject>(); // Grey Suit
+    public List<GameObject> stripedSuitList = new List<GameObject>(); // Striped Suit
+
+
     public List<GameObject> yellowBlackList = new List<GameObject>();
     public List<GameObject> orangeBlackList = new List<GameObject>();
 
