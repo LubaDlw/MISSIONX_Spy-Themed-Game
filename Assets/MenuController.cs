@@ -34,6 +34,7 @@ public class MenuController : MonoBehaviour
         }
         manager.currentPlayer = 0;
         SceneManager.LoadScene("Player1Scene");
+        SceneManager.LoadScene("Player2Scene");
     }
 
     public void onPlayer2()
