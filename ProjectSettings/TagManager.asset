@@ -11,6 +11,18 @@ TagManager:
   - Blue
   - Green
   - Orange
+  - BrownEyes
+  - Sixty
+  - Eighty
+  - Hundred
+  - OneSixty
+  - OneEighty
+  - TwoHundred
+  - BlackSuit
+  - GreySuit
+  - StripedSuit
+  - BlondeHair
+  - BlackHair
   layers:
   - Default
   - TransparentFX
