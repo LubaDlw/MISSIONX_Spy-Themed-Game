@@ -92,8 +92,15 @@ public class Manager : MonoBehaviour
     
 
     Vector2 redInitialPos, red1InitialPos, red2InitialPos, blueInitialPos, greenInitialPos, yellowInitialPos, orangeInitialPos;
+    Vector2 blackHairInitialPos, blondeHairInitialPos, brownEyesInitialPos, sixtyInitialPos, eightyInitialPos, hundredInitialPos;
+    Vector2 oneSixtyInitialPos, oneEightyInitialPos, twoHundredInitialPos, blackSuitInitialPos, greySuitInitialPos, stripedSuitInitialPos;
+
 
     bool redCorrect, red1Correct, red2Correct, blueCorrect, greenCorrect, yellowCorrect, orangeCorrect = false;
+    bool blackHairCorrect, blondeHairCorrect, brownEyesCorrect, sixtyCorrect, eightyCorrect, hundredCorrect = false;
+    bool oneSixtyCorrect, oneEightyCorrect, twoHundredCorrect, blackSuitCorrect, greySuitCorrect, stripedSuitCorrect = false;
+
+
     public GameObject cluePanel;
 
     public List<GameObject> colorGameObjects;
@@ -109,7 +116,9 @@ public class Manager : MonoBehaviour
 
     public GameObject panelPlayer1;
     public GameObject panelPlayer2;
-    // int roundsPlayed = 0;
+    public int roundsPlayed = 0; // rounds played to keep Track of endGame
+    private bool roundIncremented = false; //bool to check if the round check has been incremented yet
+
     //int currentPlayer = 1;
 
     int successfulDropsCount = 0;
@@ -140,7 +149,13 @@ public class Manager : MonoBehaviour
 
         colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, yellow, orange };
 
-      // SetRandomVisibleColors();
+        //ACTUAL GAME OBJECTS needa add multiple instancws of Each
+        //colorGameObjects = new List<GameObject> { red, red1, red2, blueEyes, greenEyes, yellow, orange,
+        //blackHair, blondeHair, brownEyes, sixty, eighty, hundred, oneSixty, oneEighty, twoHundred, blackSuit,
+        //greySuit, stripedSuit };
+
+           
+        // SetRandomVisibleColors();
     }
 
     public void NPCDone() // this the button after the panel; on player 1
@@ -252,7 +267,49 @@ public class Manager : MonoBehaviour
                                     dropEntry.callback.AddListener((eventData) => { DropObject(clone, orangeBlackList, ref orangeCorrect, orangeInitialPos); });
                                     break;
                                 // Add cases for other tags
+                                case "BlackHair":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, blackHairList, ref blackHairCorrect, blackHairInitialPos); });
+                                    break;
+                                case "BlondeHair":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, blondeHairList, ref blondeHairCorrect, blondeHairInitialPos); });
+                                    break;
+                                case "BrownEyes":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, brownEyesList, ref brownEyesCorrect, brownEyesInitialPos); });
+                                    break;
+
+                                case "Sixty":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, sixtyKG, ref sixtyCorrect, sixtyInitialPos); });
+                                    break;
+                                case "Eighty":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, eightyKG, ref eightyCorrect, eightyInitialPos); });
+                                    break;
+                                case "Hundred":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, hundredKG, ref hundredCorrect, hundredInitialPos); });
+                                    break;
+                                case "OneSixty":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, oneSixtyM, ref oneSixtyCorrect, oneSixtyInitialPos); });
+                                    break;
+                                case "OneEighty":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, oneEightyM, ref oneEightyCorrect, oneEightyInitialPos); });
+                                    break;
+                                case "TwoHundred":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, twoHundredM, ref twoHundredCorrect, twoHundredInitialPos); });
+                                    break;
+                                case "BlackSuit":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, blackSuitList, ref blackSuitCorrect, blackSuitInitialPos); });
+                                    break;
+                                case "GreySuit":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, greySuitList, ref greySuitCorrect, greySuitInitialPos); });
+                                    break;
+                                case "StripedSuit":
+                                    dropEntry.callback.AddListener((eventData) => { DropObject(clone, stripedSuitList, ref stripedSuitCorrect, stripedSuitInitialPos); });
+                                    break;
+
+
+                                // Above we are adding listeners to the cloned GameObjects for player 2
                                 default:
+
+                               
                                     Debug.LogWarning("Unhandled tag: " + tag);
                                     break;
                             }
@@ -293,23 +350,67 @@ public class Manager : MonoBehaviour
 
     void SetInitialPosition(GameObject obj)
     {
-        if (obj == red)
-            redInitialPos = obj.transform.position;
-        else if (obj == red1)
-            red1InitialPos = obj.transform.position;
-        else if (obj == red2)
-            red2InitialPos = obj.transform.position;
-        else if (obj == blue)
-            blueInitialPos = obj.transform.position;
-        else if (obj == green)
-            greenInitialPos = obj.transform.position;
-        else if (obj == yellow)
-            yellowInitialPos = obj.transform.position;
-        else if (obj == orange)
-            orangeInitialPos = obj.transform.position;
+        switch (obj.tag)
+        {
+            case "Red":
+                redInitialPos = obj.transform.position;
+                break;
+            case "Blue":
+                blueInitialPos = obj.transform.position;
+                break;
+            case "Green":
+                greenInitialPos = obj.transform.position;
+                break;
+            case "Yellow":
+                yellowInitialPos = obj.transform.position;
+                break;
+            case "Orange":
+                orangeInitialPos = obj.transform.position;
+                break;
+
+            case "BlackHair":
+                blackHairInitialPos = obj.transform.position;
+                break;
+            case "BlondeHair":
+                blondeHairInitialPos = obj.transform.position;
+                break;
+            case "BrownEyes":
+                brownEyesInitialPos = obj.transform.position;
+                break;
+            case "Sixty":
+                sixtyInitialPos = obj.transform.position;
+                break;
+            case "Eighty":
+                eightyInitialPos = obj.transform.position;
+                break;
+            case "Hundred":
+                hundredInitialPos = obj.transform.position;
+                break;
+            case "OneSixty":
+                oneSixtyInitialPos = obj.transform.position;
+                break;
+            case "OneEighty":
+                oneEightyInitialPos = obj.transform.position;
+                break;
+            case "TwoHundred":
+                twoHundredInitialPos = obj.transform.position;
+                break;
+            case "BlackSuit":
+                blackSuitInitialPos = obj.transform.position;
+                break;
+            case "GreySuit":
+                greySuitInitialPos = obj.transform.position;
+                break;
+            case "StripedSuit":
+                stripedSuitInitialPos = obj.transform.position;
+                break;
+            default:
+                Debug.LogWarning("No initial position set for the object with tag: " + obj.tag);
+                break;
+        }
     }
 
-    public void DragObject(GameObject obj)
+        public void DragObject(GameObject obj)
     {
         obj.transform.position = Input.mousePosition;
     }
@@ -489,6 +590,12 @@ public class Manager : MonoBehaviour
 
     private void Update()
     {
+
+        if (roundsPlayed == 3)// number of rounds in our game
+        {
+            Debug.Log("All rounds played");
+        }
+
         UpdateTurnText();
         if (redCorrect && red1Correct && red2Correct && blueCorrect && greenCorrect && yellowCorrect && orangeCorrect)
         {
@@ -504,11 +611,18 @@ public class Manager : MonoBehaviour
         {
             if (currentPlayer == 0)
             {
+                roundIncremented = false; // Reset the flag when Player 1's turn starts
                 turnText.text = "Player 1's Turn";
             }
             else if (currentPlayer == 1)
             {
                 turnText.text = "Player 2's Turn";
+                if (!roundIncremented)
+                {
+                    roundsPlayed++;  // Increment roundsPlayed only once per round
+                    roundIncremented = true; // Set the flag to indicate the increment has occurred
+                }
+
             }
         }
         else

@@ -12780,6 +12780,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1143022143}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: player2CriminalDisplay
+      value: 
+      objectReference: {fileID: 1518817162}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: criminals.Array.data[0]
       value: 
       objectReference: {fileID: 1521916850}
