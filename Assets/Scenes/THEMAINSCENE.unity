@@ -12790,7 +12790,7 @@ PrefabInstance:
       objectReference: {fileID: 1157953259}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: player2Criminals.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: greenBlackList.Array.data[0]

@@ -14,7 +14,7 @@ public class Manager : MonoBehaviour
     [Header("HAIR")]
     public GameObject blackHair;
     public GameObject blondeHair;
-    public GameObject red, red1, red2;
+    public GameObject red, red1, red2, red3;
 
     //Eyes
     [Header("Eyes")]
@@ -415,8 +415,6 @@ public class Manager : MonoBehaviour
         obj.transform.position = Input.mousePosition;
     }
 
-    // Drag functions
-
     public void DragRed()
     {
         DragObject(red);
@@ -434,12 +432,12 @@ public class Manager : MonoBehaviour
 
     public void DragBlue()
     {
-        DragObject(blueEyes);
+        DragObject(blue);
     }
 
     public void DragGreen()
     {
-        DragObject(greenEyes);
+        DragObject(green);
     }
 
     public void DragYellow()
@@ -451,68 +449,6 @@ public class Manager : MonoBehaviour
     {
         DragObject(orange);
     }
-
-    public void DragBlackHair()
-    {
-        DragObject(blackHair);
-    }
-
-    public void DragBlondeHair()
-    {
-        DragObject(blondeHair);
-    }
-
-    public void DragBrownEyes()
-    {
-        DragObject(brownEyes);
-    }
-
-    public void DragSixty()
-    {
-        DragObject(sixty);
-    }
-
-    public void DragEighty()
-    {
-        DragObject(eighty);
-    }
-
-    public void DragHundred()
-    {
-        DragObject(hundred);
-    }
-
-    public void DragOneSixty()
-    {
-        DragObject(oneSixty);
-    }
-
-    public void DragOneEighty()
-    {
-        DragObject(oneEighty);
-    }
-
-    public void DragTwoHundred()
-    {
-        DragObject(twoHundred);
-    }
-
-    public void DragBlackSuit()
-    {
-        DragObject(blackSuit);
-    }
-
-    public void DragGreySuit()
-    {
-        DragObject(greySuit);
-    }
-
-    public void DragStripedSuit()
-    {
-        DragObject(stripedSuit);
-    }
-
-    // Drop functions
 
     public void DropRed()
     {
@@ -531,12 +467,12 @@ public class Manager : MonoBehaviour
 
     public void DropBlue()
     {
-        DropObject(blueEyes, blueBlackList, ref blueCorrect, blueInitialPos);
+        DropObject(blue, blueBlackList, ref blueCorrect, blueInitialPos);
     }
 
     public void DropGreen()
     {
-        DropObject(greenEyes, greenBlackList, ref greenCorrect, greenInitialPos);
+        DropObject(green, greenBlackList, ref greenCorrect, greenInitialPos);
     }
 
     public void DropYellow()
@@ -548,67 +484,6 @@ public class Manager : MonoBehaviour
     {
         DropObject(orange, orangeBlackList, ref orangeCorrect, orangeInitialPos);
     }
-
-    public void DropBlackHair()
-    {
-        DropObject(blackHair, blackHairList, ref blackHairCorrect, blackHairInitialPos);
-    }
-
-    public void DropBlondeHair()
-    {
-        DropObject(blondeHair, blondeHairList, ref blondeHairCorrect, blondeHairInitialPos);
-    }
-
-    public void DropBrownEyes()
-    {
-        DropObject(brownEyes, brownEyesList, ref brownEyesCorrect, brownEyesInitialPos);
-    }
-
-    public void DropSixty()
-    {
-        DropObject(sixty, sixtyKG, ref sixtyCorrect, sixtyInitialPos);
-    }
-
-    public void DropEighty()
-    {
-        DropObject(eighty, eightyKG, ref eightyCorrect, eightyInitialPos);
-    }
-
-    public void DropHundred()
-    {
-        DropObject(hundred, hundredKG, ref hundredCorrect, hundredInitialPos);
-    }
-
-    public void DropOneSixty()
-    {
-        DropObject(oneSixty, oneSixtyM, ref oneSixtyCorrect, oneSixtyInitialPos);
-    }
-
-    public void DropOneEighty()
-    {
-        DropObject(oneEighty, oneEightyM, ref oneEightyCorrect, oneEightyInitialPos);
-    }
-
-    public void DropTwoHundred()
-    {
-        DropObject(twoHundred, twoHundredM, ref twoHundredCorrect, twoHundredInitialPos);
-    }
-
-    public void DropBlackSuit()
-    {
-        DropObject(blackSuit, blackSuitList, ref blackSuitCorrect, blackSuitInitialPos);
-    }
-
-    public void DropGreySuit()
-    {
-        DropObject(greySuit, greySuitList, ref greySuitCorrect, greySuitInitialPos);
-    }
-
-    public void DropStripedSuit()
-    {
-        DropObject(stripedSuit, stripedSuitList, ref stripedSuitCorrect, stripedSuitInitialPos);
-    }
-
 
     private void DropObject(GameObject obj, List<GameObject> blackList, ref bool correctFlag, Vector2 initialPos)
     {
