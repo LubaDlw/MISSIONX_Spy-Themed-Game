@@ -7111,7 +7111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CriminalName: Fast Savvy
   blackSlots:
-  - {fileID: 0}
+  - {fileID: 1615492513}
   - {fileID: 709303337}
   - {fileID: 678330402}
   TotalClues: 3
