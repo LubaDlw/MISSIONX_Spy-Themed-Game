@@ -557,8 +557,85 @@ public class Manager : MonoBehaviour
         obj.transform.position = slot.transform.position;
 
         // to fix bug of Slot being active after drop
-        
+        RemoveSlotFromBlacklist(slot);
 
+    }
+
+    void RemoveSlotFromBlacklist(GameObject slot)
+    {
+        // Check which blacklist the slot belongs to and remove it
+        if (redBlackList.Contains(slot))
+        {
+            redBlackList.Remove(slot);
+        }
+        else if (blueBlackList.Contains(slot))
+        {
+            blueBlackList.Remove(slot);
+        }
+        else if (greenBlackList.Contains(slot))
+        {
+            greenBlackList.Remove(slot);
+        }
+        else if (yellowBlackList.Contains(slot))
+        {
+            yellowBlackList.Remove(slot);
+        }
+        else if (orangeBlackList.Contains(slot))
+        {
+            orangeBlackList.Remove(slot);
+        }
+        else if (blackHairList.Contains(slot))
+        {
+            blackHairList.Remove(slot);
+        }
+        else if (blondeHairList.Contains(slot))
+        {
+            blondeHairList.Remove(slot);
+        }
+        else if (brownEyesList.Contains(slot))
+        {
+            brownEyesList.Remove(slot);
+        }
+        else if (sixtyKG.Contains(slot))
+        {
+            sixtyKG.Remove(slot);
+        }
+        else if (eightyKG.Contains(slot))
+        {
+            eightyKG.Remove(slot);
+        }
+        else if (hundredKG.Contains(slot))
+        {
+            hundredKG.Remove(slot);
+        }
+        else if (oneSixtyM.Contains(slot))
+        {
+            oneSixtyM.Remove(slot);
+        }
+        else if (oneEightyM.Contains(slot))
+        {
+            oneEightyM.Remove(slot);
+        }
+        else if (twoHundredM.Contains(slot))
+        {
+            twoHundredM.Remove(slot);
+        }
+        else if (blackSuitList.Contains(slot))
+        {
+            blackSuitList.Remove(slot);
+        }
+        else if (greySuitList.Contains(slot))
+        {
+            greySuitList.Remove(slot);
+        }
+        else if (stripedSuitList.Contains(slot))
+        {
+            stripedSuitList.Remove(slot);
+        }
+        else
+        {
+            Debug.LogWarning("Slot does not belong to any known blacklist.");
+        }
     }
 
     void checkScore(CriminalInfo criminal)
