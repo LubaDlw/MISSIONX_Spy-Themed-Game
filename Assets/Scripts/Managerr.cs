@@ -183,17 +183,17 @@ public class Manager : MonoBehaviour
             // new clues 
             panelPlayer1.SetActive(true); Debug.Log("Player 1 panel is activated");
             panelPlayer2.SetActive(false);
-            panelPlayer1.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
-            panelPlayer2.GetComponent<PanelInteractivityControl>().DisablePanelInteractivity();
+           // panelPlayer1.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
+           // panelPlayer2.GetComponent<PanelInteractivityControl>().DisablePanelInteractivity();
         }
         else
         {
             panelPlayer1.SetActive(false);
             panelPlayer2.SetActive(true);
             Debug.Log("Player 2 panel is activated");
-            panelPlayer1.GetComponent<PanelInteractivityControl>().DisablePanelInteractivity();
-            panelPlayer2.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
-        }
+          //  panelPlayer1.GetComponent<PanelInteractivityControl>().DisablePanelInteractivity();
+           // panelPlayer2.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
+        }//
     }
 
     void SetRandomVisibleColors()
@@ -555,6 +555,10 @@ public class Manager : MonoBehaviour
         slot.SetActive(false);
         obj.transform.SetParent(slot.transform.parent, false);
         obj.transform.position = slot.transform.position;
+
+        // to fix bug of Slot being active after drop
+        
+
     }
 
     void checkScore(CriminalInfo criminal)
