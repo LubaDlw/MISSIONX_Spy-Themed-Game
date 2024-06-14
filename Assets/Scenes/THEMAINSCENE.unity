@@ -11280,17 +11280,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &867786691 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4613785626870514004, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
-  m_PrefabInstance: {fileID: 4957452922128282360}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &867786692 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
   m_PrefabInstance: {fileID: 4957452922128282360}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867786691}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f839898cb6bb9cb4c9c0ddb318395656, type: 3}
@@ -11301,32 +11296,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1346355084058600453, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
   m_PrefabInstance: {fileID: 4957452922128282360}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867786691}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 170bae7de0be7804682276b16fde486e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &867786696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867786691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2f3d2b7b1f42c8408ff53d3869c1907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 8994307632271968282, guid: 329e847ed5cedbc479ba27d23f8f0776, type: 3}
-  - {fileID: 2189837925403609611, guid: 1cb9c12b6f3d178408d16414f913434e, type: 3}
-  - {fileID: 4404546592913686403, guid: 21755812f4d15754a94fa12f97e30be2, type: 3}
-  - {fileID: 8710502498719387737, guid: 96c31d31e3265184d9f42bbf2858b2f3, type: 3}
-  - {fileID: 1261025158624918822, guid: 29235888894263749b051225dcfce512, type: 3}
-  spawnPoints: []
-  parentPanel: {fileID: 2049531247}
 --- !u!1 &879063850
 GameObject:
   m_ObjectHideFlags: 0
@@ -30001,10 +29976,7 @@ PrefabInstance:
     - {fileID: 7669095180779822564, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4613785626870514004, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 867786696}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
 --- !u!1001 &5256900024501098221
 PrefabInstance:
