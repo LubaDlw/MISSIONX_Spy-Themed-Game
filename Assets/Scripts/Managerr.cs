@@ -14,7 +14,7 @@ public class Manager : MonoBehaviour
     [Header("HAIR")]
     public GameObject blackHair;
     public GameObject blondeHair;
-    public GameObject red, red1, red2;
+    public GameObject red, red1, red2, red3;
 
     //Eyes
     [Header("Eyes")]
@@ -147,12 +147,12 @@ public class Manager : MonoBehaviour
         panelPlayer1.SetActive(false);
         feedbacktxt.text = " ";
 
-        colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, yellow, orange };
+       // colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, yellow, orange };
 
         //ACTUAL GAME OBJECTS needa add multiple instancws of Each
-        //colorGameObjects = new List<GameObject> { red, red1, red2, blueEyes, greenEyes, yellow, orange,
-        //blackHair, blondeHair, brownEyes, sixty, eighty, hundred, oneSixty, oneEighty, twoHundred, blackSuit,
-        //greySuit, stripedSuit };
+        colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, yellow, orange,
+        blackHair, blondeHair, brownEyes, sixty, eighty, hundred, oneSixty, oneEighty, twoHundred, blackSuit,
+        greySuit, stripedSuit };
 
            
         // SetRandomVisibleColors();
@@ -183,17 +183,17 @@ public class Manager : MonoBehaviour
             // new clues 
             panelPlayer1.SetActive(true); Debug.Log("Player 1 panel is activated");
             panelPlayer2.SetActive(false);
-            panelPlayer1.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
-            panelPlayer2.GetComponent<PanelInteractivityControl>().DisablePanelInteractivity();
+           // panelPlayer1.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
+           // panelPlayer2.GetComponent<PanelInteractivityControl>().DisablePanelInteractivity();
         }
         else
         {
             panelPlayer1.SetActive(false);
             panelPlayer2.SetActive(true);
             Debug.Log("Player 2 panel is activated");
-            panelPlayer1.GetComponent<PanelInteractivityControl>().DisablePanelInteractivity();
-            panelPlayer2.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
-        }
+          //  panelPlayer1.GetComponent<PanelInteractivityControl>().DisablePanelInteractivity();
+           // panelPlayer2.GetComponent<PanelInteractivityControl>().EnablePanelInteractivity();
+        }//
     }
 
     void SetRandomVisibleColors()
@@ -609,7 +609,6 @@ public class Manager : MonoBehaviour
         DropObject(stripedSuit, stripedSuitList, ref stripedSuitCorrect, stripedSuitInitialPos);
     }
 
-
     private void DropObject(GameObject obj, List<GameObject> blackList, ref bool correctFlag, Vector2 initialPos)
     {
         // Determine the active panel based on the current player
@@ -680,6 +679,87 @@ public class Manager : MonoBehaviour
         slot.SetActive(false);
         obj.transform.SetParent(slot.transform.parent, false);
         obj.transform.position = slot.transform.position;
+
+        // to fix bug of Slot being active after drop
+        RemoveSlotFromBlacklist(slot);
+
+    }
+
+    void RemoveSlotFromBlacklist(GameObject slot)
+    {
+        // Check which blacklist the slot belongs to and remove it // this is to fix bug where player can drag on slot multiple times
+        if (redBlackList.Contains(slot))
+        {
+            redBlackList.Remove(slot);
+        }
+        else if (blueBlackList.Contains(slot))
+        {
+            blueBlackList.Remove(slot);
+        }
+        else if (greenBlackList.Contains(slot))
+        {
+            greenBlackList.Remove(slot);
+        }
+        else if (yellowBlackList.Contains(slot))
+        {
+            yellowBlackList.Remove(slot);
+        }
+        else if (orangeBlackList.Contains(slot))
+        {
+            orangeBlackList.Remove(slot);
+        }
+        else if (blackHairList.Contains(slot))
+        {
+            blackHairList.Remove(slot);
+        }
+        else if (blondeHairList.Contains(slot))
+        {
+            blondeHairList.Remove(slot);
+        }
+        else if (brownEyesList.Contains(slot))
+        {
+            brownEyesList.Remove(slot);
+        }
+        else if (sixtyKG.Contains(slot))
+        {
+            sixtyKG.Remove(slot);
+        }
+        else if (eightyKG.Contains(slot))
+        {
+            eightyKG.Remove(slot);
+        }
+        else if (hundredKG.Contains(slot))
+        {
+            hundredKG.Remove(slot);
+        }
+        else if (oneSixtyM.Contains(slot))
+        {
+            oneSixtyM.Remove(slot);
+        }
+        else if (oneEightyM.Contains(slot))
+        {
+            oneEightyM.Remove(slot);
+        }
+        else if (twoHundredM.Contains(slot))
+        {
+            twoHundredM.Remove(slot);
+        }
+        else if (blackSuitList.Contains(slot))
+        {
+            blackSuitList.Remove(slot);
+        }
+        else if (greySuitList.Contains(slot))
+        {
+            greySuitList.Remove(slot);
+        }
+        else if (stripedSuitList.Contains(slot))
+        {
+            stripedSuitList.Remove(slot);
+        }
+        else
+        {
+            Debug.LogWarning("Slot does not belong to any known blacklist.");
+        }
     }
 
     void checkScore(CriminalInfo criminal)
