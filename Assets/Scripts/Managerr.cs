@@ -420,6 +420,7 @@ public class Manager : MonoBehaviour
     public void DragRed()
     {
         DragObject(red);
+        
     }
 
     public void DragRed1()
