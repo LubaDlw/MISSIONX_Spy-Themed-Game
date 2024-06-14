@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 3091729}
   - component: {fileID: 3091728}
   m_Layer: 5
-  m_Name: YellowSlot
+  m_Name: BlackHairColour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38081053, g: 0.39215687, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 45861329}
   - component: {fileID: 45861328}
   m_Layer: 5
-  m_Name: OrangeSlot
+  m_Name: Weight - 75kg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -836,7 +836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: 0}
+  m_AnchoredPosition: {x: 74, y: 11}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45861328
@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 48560421}
   - component: {fileID: 48560420}
   m_Layer: 5
-  m_Name: OrangeSlot
+  m_Name: HairColourBlonde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1796,7 +1796,7 @@ GameObject:
   - component: {fileID: 88987541}
   - component: {fileID: 88987540}
   m_Layer: 5
-  m_Name: YellowSlot
+  m_Name: Height - 1.6m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1818,7 +1818,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: -71}
+  m_AnchoredPosition: {x: 71, y: -99}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88987540
@@ -1994,7 +1994,7 @@ GameObject:
   - component: {fileID: 95278551}
   - component: {fileID: 95278550}
   m_Layer: 5
-  m_Name: BlueSlot (1)
+  m_Name: HairColourBlonde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2016,7 +2016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: -7}
+  m_AnchoredPosition: {x: 75, y: 8}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95278550
@@ -2388,7 +2388,7 @@ GameObject:
   - component: {fileID: 124152811}
   - component: {fileID: 124152810}
   m_Layer: 5
-  m_Name: GreenSlot
+  m_Name: HairColourBlonde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3556,7 +3556,7 @@ GameObject:
   - component: {fileID: 230519935}
   - component: {fileID: 230519934}
   m_Layer: 5
-  m_Name: GreenSlot
+  m_Name: Weight - 100kg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3578,7 +3578,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: -80}
+  m_AnchoredPosition: {x: 74, y: -46}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &230519934
@@ -3777,6 +3777,81 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &258115504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258115505}
+  - component: {fileID: 258115507}
+  - component: {fileID: 258115506}
+  m_Layer: 5
+  m_Name: Height - 1.5m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &258115505
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258115504}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1971301621}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 76, y: -48}
+  m_SizeDelta: {x: 227.178, y: 50.0529}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &258115506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258115504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.38081053, g: 0.39215687, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &258115507
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258115504}
+  m_CullTransparentMesh: 1
 --- !u!1 &260453829
 GameObject:
   m_ObjectHideFlags: 0
@@ -4496,6 +4571,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304624353}
   m_CullTransparentMesh: 1
+--- !u!1 &315667534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 315667535}
+  - component: {fileID: 315667537}
+  - component: {fileID: 315667536}
+  m_Layer: 5
+  m_Name: HairColourBlack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &315667535
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315667534}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1795452192}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 74, y: -108}
+  m_SizeDelta: {x: 227.178, y: 50.0529}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &315667536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315667534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.28235295, b: 0.0087214755, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &315667537
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315667534}
+  m_CullTransparentMesh: 1
 --- !u!1 &315840592
 GameObject:
   m_ObjectHideFlags: 0
@@ -4907,6 +5057,7 @@ RectTransform:
   - {fileID: 63547678}
   - {fileID: 1827471538}
   - {fileID: 1203452246}
+  - {fileID: 1290287950}
   - {fileID: 799159051}
   - {fileID: 357695349}
   m_Father: {fileID: 1609728090}
@@ -5329,7 +5480,7 @@ GameObject:
   - component: {fileID: 357695351}
   - component: {fileID: 357695350}
   m_Layer: 5
-  m_Name: GreenSlot
+  m_Name: Weight - 80kg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5351,7 +5502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: -80}
+  m_AnchoredPosition: {x: 74, y: -110}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &357695350
@@ -5391,6 +5542,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357695348}
+  m_CullTransparentMesh: 1
+--- !u!1 &363514997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 363514998}
+  - component: {fileID: 363515000}
+  - component: {fileID: 363514999}
+  m_Layer: 5
+  m_Name: Height - 1.58m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &363514998
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363514997}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1400148609}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 74, y: -103}
+  m_SizeDelta: {x: 227.178, y: 50.0529}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &363514999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363514997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.28235295, b: 0.0087214755, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &363515000
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363514997}
   m_CullTransparentMesh: 1
 --- !u!1 &371626964
 GameObject:
@@ -5626,7 +5852,7 @@ GameObject:
   - component: {fileID: 407555312}
   - component: {fileID: 407555311}
   m_Layer: 5
-  m_Name: GreenSlot
+  m_Name: EyeColourGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5648,7 +5874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: -80}
+  m_AnchoredPosition: {x: 74, y: -49}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407555311
@@ -5723,6 +5949,7 @@ RectTransform:
   - {fileID: 10055983}
   - {fileID: 297618428}
   - {fileID: 1054023975}
+  - {fileID: 1088531095}
   - {fileID: 1531152844}
   - {fileID: 88987539}
   m_Father: {fileID: 1378164053}
@@ -5782,7 +6009,7 @@ GameObject:
   - component: {fileID: 425161370}
   - component: {fileID: 425161369}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: Height - 1.5m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5804,7 +6031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: 66}
+  m_AnchoredPosition: {x: 71, y: 80}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425161369
@@ -6421,6 +6648,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489858464}
+  m_CullTransparentMesh: 1
+--- !u!1 &507236352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507236353}
+  - component: {fileID: 507236355}
+  - component: {fileID: 507236354}
+  m_Layer: 5
+  m_Name: Height - 1.7m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &507236353
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507236352}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1778855323}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 74, y: -108}
+  m_SizeDelta: {x: 227.178, y: 50.0529}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &507236354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507236352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.28235295, b: 0.0087214755, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &507236355
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507236352}
   m_CullTransparentMesh: 1
 --- !u!1 &527387067
 GameObject:
@@ -8017,7 +8319,7 @@ GameObject:
   - component: {fileID: 678330405}
   - component: {fileID: 678330404}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: EyeColourBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8055,7 +8357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.28235295, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.381132, g: 0.2255281, b: 0.06256316, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8492,7 +8794,7 @@ GameObject:
   - component: {fileID: 700212859}
   - component: {fileID: 700212858}
   m_Layer: 5
-  m_Name: YellowSlot
+  m_Name: HairColourBlonde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8514,7 +8816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: -71}
+  m_AnchoredPosition: {x: 71, y: -29}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &700212858
@@ -8769,7 +9071,7 @@ GameObject:
   - component: {fileID: 709303340}
   - component: {fileID: 709303339}
   m_Layer: 5
-  m_Name: OrangeSlot
+  m_Name: Weight - 60kg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8791,7 +9093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: 0}
+  m_AnchoredPosition: {x: 74, y: 8}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &709303339
@@ -9024,7 +9326,7 @@ GameObject:
   - component: {fileID: 727032698}
   - component: {fileID: 727032697}
   m_Layer: 5
-  m_Name: GreenSlot
+  m_Name: EyeColourGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9046,7 +9348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: -80}
+  m_AnchoredPosition: {x: 74, y: -52}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727032697
@@ -9307,7 +9609,7 @@ GameObject:
   - component: {fileID: 737320276}
   - component: {fileID: 737320275}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: EyeColourBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9938,7 +10240,7 @@ GameObject:
   - component: {fileID: 783828182}
   - component: {fileID: 783828181}
   m_Layer: 5
-  m_Name: GreenSlot
+  m_Name: EyeColourGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10242,7 +10544,7 @@ GameObject:
   - component: {fileID: 799159053}
   - component: {fileID: 799159052}
   m_Layer: 5
-  m_Name: OrangeSlot
+  m_Name: Height - 1.8m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10264,7 +10566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: 0}
+  m_AnchoredPosition: {x: 74, y: 8}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799159052
@@ -10440,7 +10742,7 @@ GameObject:
   - component: {fileID: 809404705}
   - component: {fileID: 809404704}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: Height - 1.6m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10515,7 +10817,7 @@ GameObject:
   - component: {fileID: 811153688}
   - component: {fileID: 811153687}
   m_Layer: 5
-  m_Name: GreenSlot
+  m_Name: Height - 1.9m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10590,7 +10892,7 @@ GameObject:
   - component: {fileID: 818444528}
   - component: {fileID: 818444527}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: HairColourBlack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10792,7 +11094,7 @@ GameObject:
   - component: {fileID: 844785209}
   - component: {fileID: 844785208}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: Height - 1.8m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11558,7 +11860,7 @@ GameObject:
   - component: {fileID: 921998293}
   - component: {fileID: 921998292}
   m_Layer: 5
-  m_Name: OrangeSlot
+  m_Name: EyeColourBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11596,7 +11898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5169811, g: 0.31798795, b: 0.022434972, a: 1}
+  m_Color: {r: 0.023529422, g: 0.17601176, b: 0.5176471, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11870,7 +12172,7 @@ GameObject:
   - component: {fileID: 979521676}
   - component: {fileID: 979521675}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: Height - 1.6m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12651,7 +12953,7 @@ GameObject:
   - component: {fileID: 1054023977}
   - component: {fileID: 1054023976}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: HairColourBrunette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12673,7 +12975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: 66}
+  m_AnchoredPosition: {x: 74, y: -44}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054023976
@@ -12726,7 +13028,7 @@ GameObject:
   - component: {fileID: 1067590305}
   - component: {fileID: 1067590304}
   m_Layer: 5
-  m_Name: OrangeSlot
+  m_Name: Weight - 90kg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12748,7 +13050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: 0}
+  m_AnchoredPosition: {x: 74, y: 8}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067590304
@@ -12801,7 +13103,7 @@ GameObject:
   - component: {fileID: 1069640795}
   - component: {fileID: 1069640794}
   m_Layer: 5
-  m_Name: GreenSlot
+  m_Name: Eye Colour - Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13111,6 +13413,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087356391}
   m_CullTransparentMesh: 1
+--- !u!1 &1088531094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1088531095}
+  - component: {fileID: 1088531097}
+  - component: {fileID: 1088531096}
+  m_Layer: 5
+  m_Name: Weight - 70kg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1088531095
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088531094}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 421443175}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 74, y: 66}
+  m_SizeDelta: {x: 227.178, y: 50.0529}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1088531096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088531094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.39215687, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1088531097
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088531094}
+  m_CullTransparentMesh: 1
 --- !u!1 &1088696217
 GameObject:
   m_ObjectHideFlags: 0
@@ -13360,7 +13737,7 @@ GameObject:
   - component: {fileID: 1129352379}
   - component: {fileID: 1129352378}
   m_Layer: 5
-  m_Name: BlueSlot
+  m_Name: BrownEyeColour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13379,7 +13756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.042980045, b: 0.39215687, a: 1}
+  m_Color: {r: 0.4188679, g: 0.22730757, b: 0.024499798, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13514,7 +13891,7 @@ GameObject:
   - component: {fileID: 1136472180}
   - component: {fileID: 1136472179}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: Hair Colour - Brunette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14626,7 +15003,7 @@ GameObject:
   - component: {fileID: 1203452248}
   - component: {fileID: 1203452247}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: HairColourBrunette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15412,6 +15789,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289837760}
+  m_CullTransparentMesh: 1
+--- !u!1 &1290287949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290287950}
+  - component: {fileID: 1290287952}
+  - component: {fileID: 1290287951}
+  m_Layer: 5
+  m_Name: EyeColourBlue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1290287950
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290287949}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 337261607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 74, y: -50}
+  m_SizeDelta: {x: 227.178, y: 50.0529}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1290287951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290287949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.28235295, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1290287952
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290287949}
   m_CullTransparentMesh: 1
 --- !u!1 &1299453786
 GameObject:
@@ -16490,6 +16942,81 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1386993099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1386993100}
+  - component: {fileID: 1386993102}
+  - component: {fileID: 1386993101}
+  m_Layer: 5
+  m_Name: Height - 1.5m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1386993100
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386993099}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1731975628}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 74, y: -44}
+  m_SizeDelta: {x: 227.178, y: 50.0529}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1386993101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386993099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5169811, g: 0.31798795, b: 0.022434972, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1386993102
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386993099}
+  m_CullTransparentMesh: 1
 --- !u!1 &1387194296
 GameObject:
   m_ObjectHideFlags: 0
@@ -16932,6 +17459,7 @@ RectTransform:
   - {fileID: 818444526}
   - {fileID: 1794915530}
   - {fileID: 230519933}
+  - {fileID: 363514998}
   m_Father: {fileID: 537433876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -17842,6 +18370,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462146984}
   m_CullTransparentMesh: 1
+--- !u!1 &1468269568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468269569}
+  - component: {fileID: 1468269571}
+  - component: {fileID: 1468269570}
+  m_Layer: 5
+  m_Name: Weight - 90kg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1468269569
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468269568}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1850238073}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 71, y: -85}
+  m_SizeDelta: {x: 227.178, y: 50.0529}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1468269570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468269568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.38081053, g: 0.39215687, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1468269571
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468269568}
+  m_CullTransparentMesh: 1
 --- !u!1 &1480814096
 GameObject:
   m_ObjectHideFlags: 0
@@ -18442,7 +19045,7 @@ GameObject:
   - component: {fileID: 1531152846}
   - component: {fileID: 1531152845}
   m_Layer: 5
-  m_Name: BlueSlot
+  m_Name: EyeColourBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18464,7 +19067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: 0}
+  m_AnchoredPosition: {x: 71, y: 11}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1531152845
@@ -18517,7 +19120,7 @@ GameObject:
   - component: {fileID: 1538861019}
   - component: {fileID: 1538861018}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: ' Height - 1.7m'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18917,7 +19520,7 @@ GameObject:
   - component: {fileID: 1569202480}
   - component: {fileID: 1569202479}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: HairColourBrunette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18992,7 +19595,7 @@ GameObject:
   - component: {fileID: 1569441746}
   - component: {fileID: 1569441745}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: Height - 1.7m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19708,7 +20311,7 @@ GameObject:
   - component: {fileID: 1615492516}
   - component: {fileID: 1615492515}
   m_Layer: 5
-  m_Name: YellowSlot (1)
+  m_Name: HairColourBlonde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19730,7 +20333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 76, y: -70}
+  m_AnchoredPosition: {x: 76, y: -105}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615492515
@@ -20648,7 +21251,7 @@ GameObject:
   - component: {fileID: 1669726988}
   - component: {fileID: 1669726987}
   m_Layer: 5
-  m_Name: BlueSlot (1)
+  m_Name: HairColourBlack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20670,7 +21273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 76, y: -5}
+  m_AnchoredPosition: {x: 76, y: 8}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1669726987
@@ -20686,7 +21289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.042980045, b: 0.39215687, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -21237,7 +21840,7 @@ GameObject:
   - component: {fileID: 1713914186}
   - component: {fileID: 1713914185}
   m_Layer: 5
-  m_Name: BlueSlot (1)
+  m_Name: Height - 1.8m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21561,6 +22164,7 @@ RectTransform:
   - {fileID: 1965865868}
   - {fileID: 2031745767}
   - {fileID: 45861327}
+  - {fileID: 1386993100}
   - {fileID: 1972397219}
   m_Father: {fileID: 991074652}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22527,6 +23131,7 @@ RectTransform:
   - {fileID: 2052683744}
   - {fileID: 95278549}
   - {fileID: 1817396638}
+  - {fileID: 507236353}
   m_Father: {fileID: 1540446347}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -22584,7 +23189,7 @@ GameObject:
   - component: {fileID: 1787862133}
   - component: {fileID: 1787862132}
   m_Layer: 5
-  m_Name: OrangeSlot
+  m_Name: Height - 2m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22659,7 +23264,7 @@ GameObject:
   - component: {fileID: 1794915532}
   - component: {fileID: 1794915531}
   m_Layer: 5
-  m_Name: OrangeSlot
+  m_Name: EyeColourBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22681,7 +23286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: 0}
+  m_AnchoredPosition: {x: 74, y: 10}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794915531
@@ -22758,6 +23363,7 @@ RectTransform:
   - {fileID: 1569441744}
   - {fileID: 1067590303}
   - {fileID: 727032696}
+  - {fileID: 315667535}
   m_Father: {fileID: 251551331}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -22802,6 +23408,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795452191}
+  m_CullTransparentMesh: 1
+--- !u!1 &1801379370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1801379371}
+  - component: {fileID: 1801379373}
+  - component: {fileID: 1801379372}
+  m_Layer: 5
+  m_Name: Weight - 50kg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1801379371
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801379370}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2085930845}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 74, y: -109}
+  m_SizeDelta: {x: 227.178, y: 50.0529}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1801379372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801379370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.28235295, b: 0.0087214755, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1801379373
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801379370}
   m_CullTransparentMesh: 1
 --- !u!1 &1802599727
 GameObject:
@@ -22971,7 +23652,7 @@ GameObject:
   - component: {fileID: 1817396640}
   - component: {fileID: 1817396639}
   m_Layer: 5
-  m_Name: GreenSlot
+  m_Name: Weight - 70kg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22993,7 +23674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: -80}
+  m_AnchoredPosition: {x: 74, y: -49}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1817396639
@@ -23404,7 +24085,7 @@ GameObject:
   - component: {fileID: 1841706734}
   - component: {fileID: 1841706733}
   m_Layer: 5
-  m_Name: GreenSlot
+  m_Name: HairColourBlack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23423,7 +24104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.28235295, b: 0.0087214755, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -23714,6 +24395,7 @@ RectTransform:
   - {fileID: 425161368}
   - {fileID: 1972787142}
   - {fileID: 700212857}
+  - {fileID: 1468269569}
   m_Father: {fileID: 1277780205}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -25119,6 +25801,7 @@ RectTransform:
   - {fileID: 887805293}
   - {fileID: 678330403}
   - {fileID: 1615492514}
+  - {fileID: 258115505}
   - {fileID: 709303338}
   m_Father: {fileID: 692870634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25177,7 +25860,7 @@ GameObject:
   - component: {fileID: 1972397221}
   - component: {fileID: 1972397220}
   m_Layer: 5
-  m_Name: GreenSlot
+  m_Name: EyeColourGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25199,7 +25882,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: -80}
+  m_AnchoredPosition: {x: 74, y: -101}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1972397220
@@ -25252,7 +25935,7 @@ GameObject:
   - component: {fileID: 1972787144}
   - component: {fileID: 1972787143}
   m_Layer: 5
-  m_Name: BlueSlot
+  m_Name: EyeColourBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25274,7 +25957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: 0}
+  m_AnchoredPosition: {x: 71, y: 25}
   m_SizeDelta: {x: 227.178, y: 50.0529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1972787143
@@ -26420,7 +27103,7 @@ GameObject:
   - component: {fileID: 2031745769}
   - component: {fileID: 2031745768}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: HairColourBrunette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26748,7 +27431,7 @@ GameObject:
   - component: {fileID: 2052683746}
   - component: {fileID: 2052683745}
   m_Layer: 5
-  m_Name: Red (2)
+  m_Name: EyeColourBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27463,7 +28146,7 @@ GameObject:
   - component: {fileID: 2080619642}
   - component: {fileID: 2080619641}
   m_Layer: 5
-  m_Name: OrangeSlot
+  m_Name: EyeColourBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27501,7 +28184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5169811, g: 0.31798795, b: 0.022434972, a: 1}
+  m_Color: {r: 0.004421438, g: 0.21428885, b: 0.78113204, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -27562,6 +28245,7 @@ RectTransform:
   - {fileID: 809404703}
   - {fileID: 1669726986}
   - {fileID: 407555310}
+  - {fileID: 1801379371}
   m_Father: {fileID: 954652594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
