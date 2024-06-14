@@ -19120,7 +19120,7 @@ GameObject:
   - component: {fileID: 1538861019}
   - component: {fileID: 1538861018}
   m_Layer: 5
-  m_Name: Height
+  m_Name: ' Height - 1.7m'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
