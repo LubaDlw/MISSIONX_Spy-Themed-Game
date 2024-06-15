@@ -42,7 +42,7 @@ public class Manager : MonoBehaviour
 
 
 
-    public GameObject blue, green, yellow, orange;
+    public GameObject blue, green;
 
     public List<GameObject> colorPrefabs;
 
@@ -150,7 +150,7 @@ public class Manager : MonoBehaviour
        // colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, yellow, orange };
 
         //ACTUAL GAME OBJECTS needa add multiple instancws of Each
-        colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, yellow, orange,
+        colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, //yellow, orange,
         blackHair, blondeHair, brownEyes, sixty, eighty, hundred, oneSixty, oneEighty, twoHundred, blackSuit,
         greySuit, stripedSuit };
 
@@ -445,12 +445,12 @@ public class Manager : MonoBehaviour
 
     public void DragYellow()
     {
-        DragObject(yellow);
+       // DragObject(yellow);
     }
 
     public void DragOrange()
     {
-        DragObject(orange);
+        //DragObject(orange);
     }
 
     public void DragBlackHair()
@@ -542,12 +542,12 @@ public class Manager : MonoBehaviour
 
     public void DropYellow()
     {
-        DropObject(yellow, yellowBlackList, ref yellowCorrect, yellowInitialPos);
+       // DropObject(yellow, yellowBlackList, ref yellowCorrect, yellowInitialPos);
     }
 
     public void DropOrange()
     {
-        DropObject(orange, orangeBlackList, ref orangeCorrect, orangeInitialPos);
+        //DropObject(orange, orangeBlackList, ref orangeCorrect, orangeInitialPos);
     }
 
     public void DropBlackHair()
