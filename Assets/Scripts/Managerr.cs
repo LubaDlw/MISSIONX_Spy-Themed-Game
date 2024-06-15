@@ -9,12 +9,16 @@ public class Manager : MonoBehaviour
 {
 
     public TMP_Text turnText;
+    public GameObject WinPlayer1;
+    public GameObject WinPlayer2;
+    public GameObject Draw;
+
 
     //HAIR
     [Header("HAIR")]
     public GameObject blackHair;
     public GameObject blondeHair;
-    public GameObject red, red1, red2, red3;
+    public GameObject red;
 
     //Eyes
     [Header("Eyes")]
@@ -150,11 +154,207 @@ public class Manager : MonoBehaviour
        // colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, yellow, orange };
 
         //ACTUAL GAME OBJECTS needa add multiple instancws of Each
-        colorGameObjects = new List<GameObject> { red, red1, red2, blue, green, //yellow, orange,
+        colorGameObjects = new List<GameObject> { red, blue, green, //yellow, orange,
         blackHair, blondeHair, brownEyes, sixty, eighty, hundred, oneSixty, oneEighty, twoHundred, blackSuit,
         greySuit, stripedSuit };
 
-           
+        List<GameObject> clonedObjects = new List<GameObject>();
+        List<GameObject> clonedObjects2 = new List<GameObject>();
+        foreach (var original in colorGameObjects)
+        {
+            GameObject clone = Instantiate(original);
+            clone.SetActive(false); // Ensure clones are initially inactive
+            EventTrigger trigger = clone.GetComponent<EventTrigger>();
+            if (trigger != null)
+            {
+                trigger.triggers.Clear(); // Clear existing triggers if any
+                EventTrigger.Entry entry = new EventTrigger.Entry();
+                entry.eventID = EventTriggerType.Drag;
+                entry.callback.AddListener((eventData) => { DragObject(clone); });
+                trigger.triggers.Add(entry);
+
+                // Add other event type
+                // ok so we need to figure out how to get correctdrag and drop logic forclones 
+
+                EventTrigger dropTrigger = clone.GetComponent<EventTrigger>();
+                if (dropTrigger != null)
+                {
+                    //dropTrigger.triggers.Clear(); // Clear existing triggers if any
+                    EventTrigger.Entry dropEntry = new EventTrigger.Entry();
+                    dropEntry.eventID = EventTriggerType.Drop; // Use appropriate event type for drop
+                    string tag = clone.tag;
+
+                    switch (tag)
+                    {
+                        case "Red":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, redBlackList, ref redCorrect, redInitialPos); });
+                            break;
+                        case "Blue":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, blueBlackList, ref blueCorrect, blueInitialPos); });
+                            break;
+                        case "Green":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, greenBlackList, ref greenCorrect, greenInitialPos); });
+                            break;
+                        case "Yellow":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, yellowBlackList, ref yellowCorrect, yellowInitialPos); });
+                            break;
+                        case "Orange":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, orangeBlackList, ref orangeCorrect, orangeInitialPos); });
+                            break;
+                        // Add cases for other tags
+                        case "BlackHair":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, blackHairList, ref blackHairCorrect, blackHairInitialPos); });
+                            break;
+                        case "BlondeHair":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, blondeHairList, ref blondeHairCorrect, blondeHairInitialPos); });
+                            break;
+                        case "BrownEyes":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, brownEyesList, ref brownEyesCorrect, brownEyesInitialPos); });
+                            break;
+
+                        case "Sixty":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, sixtyKG, ref sixtyCorrect, sixtyInitialPos); });
+                            break;
+                        case "Eighty":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, eightyKG, ref eightyCorrect, eightyInitialPos); });
+                            break;
+                        case "Hundred":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, hundredKG, ref hundredCorrect, hundredInitialPos); });
+                            break;
+                        case "OneSixty":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, oneSixtyM, ref oneSixtyCorrect, oneSixtyInitialPos); });
+                            break;
+                        case "OneEighty":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, oneEightyM, ref oneEightyCorrect, oneEightyInitialPos); });
+                            break;
+                        case "TwoHundred":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, twoHundredM, ref twoHundredCorrect, twoHundredInitialPos); });
+                            break;
+                        case "BlackSuit":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, blackSuitList, ref blackSuitCorrect, blackSuitInitialPos); });
+                            break;
+                        case "GreySuit":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, greySuitList, ref greySuitCorrect, greySuitInitialPos); });
+                            break;
+                        case "StripedSuit":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, stripedSuitList, ref stripedSuitCorrect, stripedSuitInitialPos); });
+                            break;
+
+
+                        // Above we are adding listeners to the cloned GameObjects for player 2
+                        default:
+
+
+                            Debug.LogWarning("Unhandled tag: " + tag);
+                            break;
+                    }
+                    dropTrigger.triggers.Add(dropEntry);
+                }
+            }
+
+            clonedObjects.Add(clone);
+            
+        }
+        foreach (var original in colorGameObjects)
+        {
+            GameObject clone = Instantiate(original);
+            clone.SetActive(false); // Ensure clones are initially inactive
+            EventTrigger trigger = clone.GetComponent<EventTrigger>();
+            if (trigger != null)
+            {
+                trigger.triggers.Clear(); // Clear existing triggers if any
+                EventTrigger.Entry entry = new EventTrigger.Entry();
+                entry.eventID = EventTriggerType.Drag;
+                entry.callback.AddListener((eventData) => { DragObject(clone); });
+                trigger.triggers.Add(entry);
+
+                // Add other event type
+                // ok so we need to figure out how to get correctdrag and drop logic forclones 
+
+                EventTrigger dropTrigger = clone.GetComponent<EventTrigger>();
+                if (dropTrigger != null)
+                {
+                    //dropTrigger.triggers.Clear(); // Clear existing triggers if any
+                    EventTrigger.Entry dropEntry = new EventTrigger.Entry();
+                    dropEntry.eventID = EventTriggerType.Drop; // Use appropriate event type for drop
+                    string tag = clone.tag;
+
+                    switch (tag)
+                    {
+                        case "Red":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, redBlackList, ref redCorrect, redInitialPos); });
+                            break;
+                        case "Blue":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, blueBlackList, ref blueCorrect, blueInitialPos); });
+                            break;
+                        case "Green":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, greenBlackList, ref greenCorrect, greenInitialPos); });
+                            break;
+                        case "Yellow":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, yellowBlackList, ref yellowCorrect, yellowInitialPos); });
+                            break;
+                        case "Orange":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, orangeBlackList, ref orangeCorrect, orangeInitialPos); });
+                            break;
+                        // Add cases for other tags
+                        case "BlackHair":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, blackHairList, ref blackHairCorrect, blackHairInitialPos); });
+                            break;
+                        case "BlondeHair":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, blondeHairList, ref blondeHairCorrect, blondeHairInitialPos); });
+                            break;
+                        case "BrownEyes":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, brownEyesList, ref brownEyesCorrect, brownEyesInitialPos); });
+                            break;
+
+                        case "Sixty":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, sixtyKG, ref sixtyCorrect, sixtyInitialPos); });
+                            break;
+                        case "Eighty":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, eightyKG, ref eightyCorrect, eightyInitialPos); });
+                            break;
+                        case "Hundred":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, hundredKG, ref hundredCorrect, hundredInitialPos); });
+                            break;
+                        case "OneSixty":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, oneSixtyM, ref oneSixtyCorrect, oneSixtyInitialPos); });
+                            break;
+                        case "OneEighty":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, oneEightyM, ref oneEightyCorrect, oneEightyInitialPos); });
+                            break;
+                        case "TwoHundred":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, twoHundredM, ref twoHundredCorrect, twoHundredInitialPos); });
+                            break;
+                        case "BlackSuit":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, blackSuitList, ref blackSuitCorrect, blackSuitInitialPos); });
+                            break;
+                        case "GreySuit":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, greySuitList, ref greySuitCorrect, greySuitInitialPos); });
+                            break;
+                        case "StripedSuit":
+                            dropEntry.callback.AddListener((eventData) => { DropObject(clone, stripedSuitList, ref stripedSuitCorrect, stripedSuitInitialPos); });
+                            break;
+
+
+                        // Above we are adding listeners to the cloned GameObjects for player 2
+                        default:
+
+
+                            Debug.LogWarning("Unhandled tag: " + tag);
+                            break;
+                    }
+                    dropTrigger.triggers.Add(dropEntry);
+                }
+            }
+
+            clonedObjects2.Add(clone);
+
+        }
+
+        // Add clones to the colorGameObjects list
+
+        colorGameObjects.AddRange(clonedObjects);
+        colorGameObjects.AddRange(clonedObjects2);
         // SetRandomVisibleColors();
     }
 
@@ -425,12 +625,12 @@ public class Manager : MonoBehaviour
 
     public void DragRed1()
     {
-        DragObject(red1);
+       // DragObject(red1);
     }
 
     public void DragRed2()
     {
-        DragObject(red2);
+      //  DragObject(red2);
     }
 
     public void DragBlue()
@@ -522,12 +722,12 @@ public class Manager : MonoBehaviour
 
     public void DropRed1()
     {
-        DropObject(red1, redBlackList, ref red1Correct, red1InitialPos);
+        //DropObject(red1, redBlackList, ref red1Correct, red1InitialPos);
     }
 
     public void DropRed2()
     {
-        DropObject(red2, redBlackList, ref red2Correct, red2InitialPos);
+        //DropObject(red2, redBlackList, ref red2Correct, red2InitialPos);
     }
 
     public void DropBlue()
@@ -797,9 +997,21 @@ public class Manager : MonoBehaviour
     private void Update()
     {
 
-        if (roundsPlayed == 3)// number of rounds in our game
+        if (roundsPlayed == 15)// number of rounds in our game
         {
             Debug.Log("All rounds played");
+            if(player1Score>player2Score)
+            {
+                WinPlayer1.SetActive(true);
+            }
+            else if (player2Score>player1Score)
+            {
+                WinPlayer2.SetActive(true);
+            }
+            else if(player1Score == player2Score)
+            {
+                Draw.SetActive(true);
+            }
         }
 
         UpdateTurnText();
