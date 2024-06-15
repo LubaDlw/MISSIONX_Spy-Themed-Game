@@ -9,6 +9,10 @@ public class Manager : MonoBehaviour
 {
 
     public TMP_Text turnText;
+    public GameObject WinPlayer1;
+    public GameObject WinPlayer2;
+    public GameObject Draw;
+
 
     //HAIR
     [Header("HAIR")]
@@ -993,9 +997,21 @@ public class Manager : MonoBehaviour
     private void Update()
     {
 
-        if (roundsPlayed == 3)// number of rounds in our game
+        if (roundsPlayed == 15)// number of rounds in our game
         {
             Debug.Log("All rounds played");
+            if(player1Score>player2Score)
+            {
+                WinPlayer1.SetActive(true);
+            }
+            else if (player2Score>player1Score)
+            {
+                WinPlayer2.SetActive(true);
+            }
+            else if(player1Score == player2Score)
+            {
+                Draw.SetActive(true);
+            }
         }
 
         UpdateTurnText();
