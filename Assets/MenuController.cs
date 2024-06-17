@@ -45,7 +45,8 @@ public class MenuController : MonoBehaviour
             PlayerPrefs.SetInt("Player1Score", Manager.Instance.player1Score);
         }
         manager.currentPlayer = 1;
-        SceneManager.LoadScene("Player2Scene");
+        SceneManager.LoadScene("THEMAINSCENE");
+        SceneManager.LoadScene("THEMAINSCENE");
     }
     public void ExitGame()
     {

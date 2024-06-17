@@ -411,9 +411,9 @@ public class Manager : MonoBehaviour
         {
             BtnClick2++; 
 
-            if(BtnClick2 == 3)
+            if(BtnClick2 == 10)
             {
-                Debug.Log("Btn2 = 3");
+                Debug.Log("Btn2 = 10");
                 player2Btn.SetActive(false);
             }
         }
@@ -1038,13 +1038,13 @@ public class Manager : MonoBehaviour
             }
         }
 
-        if (BtnClick1 == 3)
+        if (BtnClick1 == 10)
         {
             player1Btn.SetActive(false);
         }
-        else if(BtnClick2 == 3)
+        else if(BtnClick2 == 10)
         {
-            Debug.Log("Btn 2 = 3, Set ACtive(false)");
+            Debug.Log("Btn 2 = 10, Set ACtive(false)");
             player2Btn.SetActive(false);
         }
 
