@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using JetBrains.Annotations;
 
 public class Manager : MonoBehaviour
 {
@@ -12,8 +13,10 @@ public class Manager : MonoBehaviour
     public GameObject WinPlayer1;
     public GameObject WinPlayer2;
     public GameObject Draw;
-
-
+    public int Forfeit1 = 0; 
+    public int Forfeit2 = 0;
+    public GameObject Forfeit1Btn;
+    public GameObject Forfeit2Btn;
     //HAIR
     [Header("HAIR")]
     public GameObject blackHair;
@@ -1116,14 +1119,24 @@ public class Manager : MonoBehaviour
             }
         }
 
-        if (BtnClick1 == 10)
+        if (BtnClick1 == 3)
         {
             player1Btn.SetActive(false);
         }
-        else if(BtnClick2 == 10)
+        else if(BtnClick2 == 3)
         {
             Debug.Log("Btn 2 = 10, Set ACtive(false)");
             player2Btn.SetActive(false);
+        }
+
+        if (BtnClick1 == 3)
+        {
+            Forfeit1Btn.SetActive(true);   
+        }
+
+        else if (BtnClick2 == 3 )
+        {
+            Forfeit2Btn.SetActive(true);
         }
 
      
@@ -1136,7 +1149,33 @@ public class Manager : MonoBehaviour
         UpdatePlayerScoreText();
         feedbacktxt.text = feedback;
     }
+     public void onForfeit1()
+    {
+        if (Forfeit1 == 0)
+        {
+            Forfeit1++;
+        }
+        else if (Forfeit1 == 1)
+        {
+            WinPlayer2.SetActive(true);
+        }
 
+
+        
+    }
+
+    public void onForfeit2()
+    {
+            if (Forfeit2 == 0)
+            {
+               Forfeit2++;
+            }
+
+            else if (Forfeit2 == 1)
+        {
+            WinPlayer1.SetActive(true);
+        }
+        }
     void UpdateTurnText()
     {
         if (turnText != null)
