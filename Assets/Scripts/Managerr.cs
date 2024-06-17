@@ -1129,12 +1129,12 @@ public class Manager : MonoBehaviour
             player2Btn.SetActive(false);
         }
 
-        if (BtnClick1 == 3)
+        if (BtnClick1 == 5)
         {
             Forfeit1Btn.SetActive(true);   
         }
 
-        else if (BtnClick2 == 3 )
+        else if (BtnClick2 == 5)
         {
             Forfeit2Btn.SetActive(true);
         }
