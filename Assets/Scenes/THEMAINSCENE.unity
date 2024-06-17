@@ -2615,7 +2615,7 @@ GameObject:
   - component: {fileID: 85728398}
   - component: {fileID: 85728397}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: GenerateClues2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2687,7 +2687,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 867786692}
         m_TargetAssemblyTypeName: Manager, Assembly-CSharp
-        m_MethodName: SetRandomVisibleColors
+        m_MethodName: onBtnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -51353,7 +51353,7 @@ GameObject:
   - component: {fileID: 1758532039}
   - component: {fileID: 1758532038}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: GenerateClues1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51425,7 +51425,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 867786692}
         m_TargetAssemblyTypeName: Manager, Assembly-CSharp
-        m_MethodName: SetRandomVisibleColors
+        m_MethodName: onBtnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -62263,6 +62263,14 @@ PrefabInstance:
       propertyPath: bluePrefab
       value: 
       objectReference: {fileID: 3649308918082150587, guid: a160ca00089e28f489b815cb624d370c, type: 3}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: player1Btn
+      value: 
+      objectReference: {fileID: 1758532036}
+    - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
+      propertyPath: player2Btn
+      value: 
+      objectReference: {fileID: 85728395}
     - target: {fileID: 2373568550320396398, guid: 323d43070f7d3e84ebe8880338da81ae, type: 3}
       propertyPath: twoHundred
       value: 

@@ -117,6 +117,11 @@ public class Manager : MonoBehaviour
     public string feedback;
 
     public int currentPlayer = 0;
+    public int BtnClick1 = 0;
+    public int BtnClick2 = 0;
+
+    public GameObject player1Btn;
+    public GameObject player2Btn;
 
     public GameObject panelPlayer1;
     public GameObject panelPlayer2;
@@ -396,6 +401,25 @@ public class Manager : MonoBehaviour
         }//
     }
 
+    public void onBtnClick() // to keep track of how many times clye btn was clicked
+    {
+        if (currentPlayer == 0)
+        {
+            BtnClick1++;
+        }
+        else if (currentPlayer ==1)
+        {
+            BtnClick2++; 
+
+            if(BtnClick2 == 3)
+            {
+                Debug.Log("Btn2 = 3");
+                player2Btn.SetActive(false);
+            }
+        }
+
+        SetRandomVisibleColors();
+    }
     void SetRandomVisibleColors()
     {
 
@@ -1013,6 +1037,18 @@ public class Manager : MonoBehaviour
                 Draw.SetActive(true);
             }
         }
+
+        if (BtnClick1 == 3)
+        {
+            player1Btn.SetActive(false);
+        }
+        else if(BtnClick2 == 3)
+        {
+            Debug.Log("Btn 2 = 3, Set ACtive(false)");
+            player2Btn.SetActive(false);
+        }
+
+     
 
         UpdateTurnText();
         if (redCorrect && red1Correct && red2Correct && blueCorrect && greenCorrect && yellowCorrect && orangeCorrect)
