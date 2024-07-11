@@ -1,0 +1,316 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71772bc3afb139449e35461efb79005, type: 3}
+  m_Name: SettingsWindowState
+  m_EditorClassIdentifier: 
+  AllPages:
+    EnvironmentAndCredentialsPage:
+      _showNewToAws: 0
+      _scrollPosition: {x: 0, y: 0}
+    IdentityAndAuthenticationPage:
+      _tabViewWidget:
+        _selectedTabId: 0
+      _identitySettingsTab:
+        _isDashboardEnabled:
+          CurrentValue: 1
+        _scrollPosition: {x: 0, y: 0}
+        _isEnabledEmailAndPassword:
+          CurrentValue: 1
+        _isEnabledFacebook:
+          CurrentValue: 0
+        _facebookAppId:
+          CurrentValue: 
+      _identityExamplesTab:
+        _userLoginWidget:
+          _userName: 
+        _scrollPosition: {x: 0, y: 0}
+        _registerExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          UserName: 
+          Email: 
+        _resendConfirmationExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          UserName: 
+        _confirmEmailExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          UserName: 
+          ConfirmationCode: 
+        _loginExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          UserName: 
+        _getUserExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+        _forgotPasswordExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          UserName: 
+        _confirmForgotPasswordExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          UserName: 
+          ConfirmationCode: 
+        _openFacebookLoginExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+        _logoutExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+    GameStateCloudSavingPage:
+      _tabViewWidget:
+        _selectedTabId: 0
+      _gameStateCloudSavingSettingsTab:
+        _isDashboardEnabled:
+          CurrentValue: 1
+        _scrollPosition: {x: 0, y: 0}
+        _maxSlotsPerPlayer:
+          CurrentValue: 10
+      _gameStateCloudSavingExamplesTab:
+        _userLoginWidget:
+          _userName: 
+        _scrollPosition: {x: 0, y: 0}
+        _saveSlotExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          SlotName: 
+          Metadata: 
+          FilePath: 
+          OverrideSync: 0
+          ActionedSlot:
+            SlotName: 
+            MetadataLocal: 
+            MetadataCloud: 
+            SizeLocal: 0
+            SizeCloud: 0
+            LastModifiedLocal: 0
+            LastModifiedCloud: 0
+            LastSync: 0
+            SlotSyncStatus: 0
+        _loadSlotExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          SlotName: 
+          FilePath: 
+          OverrideSync: 0
+          ActionedSlot:
+            SlotName: 
+            MetadataLocal: 
+            MetadataCloud: 
+            SizeLocal: 0
+            SizeCloud: 0
+            LastModifiedLocal: 0
+            LastModifiedCloud: 0
+            LastSync: 0
+            SlotSyncStatus: 0
+        _deleteSlotExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          SlotName: 
+        _getSlotSyncStatusExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          SlotName: 
+          ActionedSlot:
+            SlotName: 
+            MetadataLocal: 
+            MetadataCloud: 
+            SizeLocal: 0
+            SizeCloud: 0
+            LastModifiedLocal: 0
+            LastModifiedCloud: 0
+            LastSync: 0
+            SlotSyncStatus: 0
+        _getAllSlotSyncStatusesExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          Slots: []
+        _areCachedSlotsDisplayed: 0
+    AchievementsPage:
+      _tabViewWidget:
+        _selectedTabId: 0
+      _achievementSettingsTab:
+        _isDashboardEnabled:
+          CurrentValue: 1
+        _scrollPosition: {x: 0, y: 0}
+      _achievementExamplesTab:
+        _userLoginWidget:
+          _userName: 
+        _scrollPosition: {x: 0, y: 0}
+        _listAchievementsExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          Achievements: []
+        _getAchievementExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          AchievementId: 
+          Achievement:
+            AchievementId: 
+            Title: 
+            LockedDescription: 
+            UnlockedDescription: 
+            LockedIcon: 
+            UnlockedIcon: 
+            CurrentValue: 0
+            RequiredAmount: 0
+            Points: 0
+            OrderNumber: 0
+            IsSecret: 0
+            IsHidden: 0
+            IsEarned: 0
+            IsNewlyEarned: 0
+            EarnedAt: 
+            UpdatedAt: 
+        _updateAchievementExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          AchievementId: 
+          IncrementBy: 1
+          Achievement:
+            AchievementId: 
+            Title: 
+            LockedDescription: 
+            UnlockedDescription: 
+            LockedIcon: 
+            UnlockedIcon: 
+            CurrentValue: 0
+            RequiredAmount: 0
+            Points: 0
+            OrderNumber: 0
+            IsSecret: 0
+            IsHidden: 0
+            IsEarned: 0
+            IsNewlyEarned: 0
+            EarnedAt: 
+            UpdatedAt: 
+      _achievementDataTab:
+        _scrollPosition: {x: 0, y: 0}
+        _achievementsScrollPosition: {x: 0, y: 0}
+        _localAchievements:
+          _keys: []
+          _values: []
+        _achievementIconsBaseUrl: 
+        _isShowingCloudSyncErrorBanner: 0
+        _isDeletingAchievementsFromCloud: 0
+        _isUploadingAchievementsToCloud: 0
+        _isDownloadingAchievementsFromCloud: 0
+    UserGameplayDataPage:
+      _tabViewWidget:
+        _selectedTabId: 0
+      _userGameplayDataSettingsTab:
+        _isDashboardEnabled:
+          CurrentValue: 1
+        _scrollPosition: {x: 0, y: 0}
+      _userGameplayDataExamplesTab:
+        _userLoginWidget:
+          _userName: 
+        _scrollPosition: {x: 0, y: 0}
+        _addBundleExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          BundleName: 
+          BundleKeys:
+          - 
+          BundleValues:
+          - 
+        _listUserGameplayDataExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          BundleNames: []
+        _getBundleExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          BundleName: 
+          BundleKeys: []
+          BundleValues: []
+        _getBundleItemExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          BundleName: 
+          BundleItemKey: 
+          BundleItemValueResponse: 
+        _updateBundleItemExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          BundleName: 
+          BundleItemKey: 
+          NewBundleItemValue: 
+        _deleteAllUserGameplayDataExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+        _deleteBundleExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          BundleName: 
+        _deleteBundleItemsExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          BundleName: 
+          BundleItemKeys:
+          - 
+        _persistToCacheExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          FilePath: 
+        _loadFromCacheExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          FilePath: 
+        _dropAllCachedEventsExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+        _setClientSettingsExampleUI:
+          IsResponseDisplayed: 0
+          _isExampleDisplayed: 1
+          ClientTimeoutInSeconds: 3
+          RetryIntervalSeconds: 5
+          MaxRetryQueueSize: 256
+          MaxRetries: 32
+          RetryStrategy: 0
+          MaxExponentialRetryThreshold: 32
+          PaginationSize: 100
+    LogPage:
+      _scrollPositionMain: {x: 0, y: 0}
+      _scrollPositionLogs: {x: 0, y: 0}
+      _verbosityLevel: 1
+      _maximumLogEntries: 1000
+      _isWordWrapEnabled: 0
+      _shouldFilterInfoLogs: 0
+      _shouldFilterWarnLogs: 0
+      _shouldFilterErrorLogs: 0
+  SettingsWindowHasEverBeenOpened: 1
+  NavigationTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 01000000
+    m_LastClickedID: 1
+    m_ExpandedIDs: 0000000002000000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 

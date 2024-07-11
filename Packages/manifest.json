@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.amazonaws.gamekit": "file:C:/Users/ldlwa/Downloads/com.amazonaws.gamekit-1.0.1.tgz",
     "com.unity.collab-proxy": "2.2.0",
     "com.unity.feature.2d": "2.0.0",
     "com.unity.ide.rider": "3.0.26",
